@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSR | Central Coalfields Limited – Corporate Social Responsibility</title>
+  <meta name="description" content="Central Coalfields Limited CSR – Transforming lives across Jharkhand through education, health, skill development, sports and sustainable livelihoods."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=Open+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       CCL AUTHENTIC COLOUR SYSTEM
+       Extracted directly from centralcoalfields.in header/footer
+       ─────────────────────────────────────────────────────────
+       Primary: #1A1A1A  — CCL near-black (utility bar, footer)
+       Accent:  #F5A800  — CCL golden yellow (main navbar, strips)
+       ═══════════════════════════════════════════════════════════ */
+    :root {
+      /* CCL Brand Colours */
+      --ccl-black:        #1A1A1A;
+      --ccl-dark:         #111111;
+      --ccl-grey-dark:    #242424;
+      --ccl-grey-mid:     #2E2E2E;
+      --ccl-yellow:       #F5A800;
+      --ccl-yellow-dk:    #D48F00;
+      --ccl-yellow-lt:    #FFF8E7;
+      --ccl-yellow-pale:  #FFFCF0;
+      --ccl-white:        #FFFFFF;
+      --ccl-off-white:    #F8F8F8;
+      --ccl-light-bg:     #F4F4F4;
+      --ccl-border:       #E0E0E0;
+      --ccl-text:         #1A1A1A;
+      --ccl-muted:        #5C5C5C;
+      --ccl-muted-lt:     #888888;
+
+      /* Sector Colours — preserved from original */
+      --s-edu:    #1D4ED8; --s-edu-bg:    #EFF6FF;
+      --s-health: #DC2626; --s-health-bg: #FEF2F2;
+      --s-skill:  #B45309; --s-skill-bg:  #FFFBEB;
+      --s-sport:  #6D28D9; --s-sport-bg:  #EDE9FE;
+      --s-animal: #0E7490; --s-animal-bg: #E0F2FE;
+      --s-env:    #15803D; --s-env-bg:    #F0FDF4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--ccl-off-white);
+      color: var(--ccl-text);
+      overflow-x: hidden;
+    }
+    a:focus-visible { outline: 3px solid var(--ccl-yellow); outline-offset: 3px; border-radius: 3px; }
+
+    /* ═══════════════════════════════════════════════
+       CCL MAIN HEADER — Exact replica of CCL website
+       Top utility bar (black) + Yellow navbar
+    ═══════════════════════════════════════════════ */
+    .ccl-header { position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,.4); }
+
+    /* Top utility bar — black with social icons */
+    .ccl-utility-bar {
+      background: var(--ccl-dark);
+      padding: 5px 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+    .ccl-util-icons { display: flex; align-items: center; gap: 8px; }
+    .ccl-util-icon {
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 3px;
+      font-size: 13px;
+      text-decoration: none;
+      transition: opacity .2s;
+      color: #fff;
+    }
+    .ccl-util-icon:hover { opacity: .75; }
+    .u-home { background: #555; }
+    .u-shield { background: #8B0000; }
+    .u-fb { background: #1877F2; }
+    .u-tw { background: #1DA1F2; }
+    .u-ig { background: #E1306C; }
+    .u-li { background: #0A66C2; }
+    .u-yt { background: #FF0000; }
+    .ccl-util-divider { width: 1px; height: 16px; background: rgba(255,255,255,.18); margin: 0 4px; }
+    .ccl-util-link {
+      font-size: 12px; color: rgba(255,255,255,.7);
+      text-decoration: none; font-weight: 600;
+      transition: color .2s;
+    }
+    .ccl-util-link:hover { color: var(--ccl-yellow); }
+    .ccl-util-lang {
+      font-size: 12px; color: var(--ccl-yellow);
+      font-weight: 700; cursor: pointer;
+      border: 1px solid rgba(245,168,0,.35);
+      padding: 2px 8px; border-radius: 3px;
+    }
+
+    /* Main yellow navbar */
+    .ccl-main-nav {
+      background: var(--ccl-yellow);
+      display: flex;
+      align-items: stretch;
+      min-height: 58px;
+    }
+    /* Logo area — dark diagonal panel */
+    .ccl-logo-wrap {
+      background: var(--ccl-dark);
+      display: flex;
+      align-items: center;
+      padding: 6px 28px 6px 16px;
+      position: relative;
+      flex-shrink: 0;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+      margin-right: 10px;
+    }
+    .ccl-logo-inner {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none;
+    }
+    .ccl-logo-emblem {
+      width: 44px; height: 44px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 2px solid rgba(255,255,255,.2);
+      overflow: hidden;
+    }
+    .ccl-logo-ccl {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 1;
+      color: #1A6B3A;
+      letter-spacing: .02em;
+    }
+    .ccl-logo-tagline {
+      display: flex; flex-direction: column; gap: 0;
+    }
+    .ccl-logo-tagline .t1 {
+      font-size: 14px; font-weight: 800;
+      color: #fff; letter-spacing: .04em;
+    }
+    .ccl-logo-tagline .t2 {
+      font-size: 8.5px; color: rgba(255,255,255,.55);
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+    /* Nav links on yellow bar */
+    .ccl-nav-links {
+      display: flex; align-items: stretch;
+      list-style: none; flex: 1; padding: 0 8px;
+    }
+    .ccl-nav-links > li {
+      position: relative; display: flex; align-items: center;
+    }
+    .ccl-nav-links > li > a {
+      display: flex; align-items: center; gap: 4px;
+      padding: 0 14px;
+      font-size: 13px; font-weight: 700;
+      color: var(--ccl-dark);
+      text-decoration: none;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(0,0,0,.08);
+      height: 100%;
+      transition: background .2s, color .2s;
+      white-space: nowrap;
+    }
+    .ccl-nav-links > li > a:hover {
+      background: rgba(0,0,0,.08);
+      color: var(--ccl-dark);
+    }
+    .ccl-nav-links > li > a .nav-arrow {
+      font-size: 9px; opacity: .65;
+    }
+
+    /* ═══════════════════════════════════════════════
+       CSR SECONDARY NAV — thin bar below CCL header
+       Replaces the original full CSR header
+    ═══════════════════════════════════════════════ */
+    .csr-subnav {
+      background: var(--ccl-black);
+      border-bottom: 3px solid var(--ccl-yellow);
+    }
+    .csr-subnav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+    }
+    /* CSR identity badge */
+    .csr-id {
+      display: flex; align-items: center; gap: 9px;
+      padding: 9px 18px 9px 0;
+      border-right: 1px solid rgba(255,255,255,.12);
+      margin-right: 4px;
+      flex-shrink: 0;
+    }
+    .csr-id-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--ccl-yellow);
+      animation: blink 2.4s infinite;
+    }
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .csr-id-text {
+      font-size: 12px; font-weight: 700;
+      color: var(--ccl-yellow);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    /* CSR sub-links */
+    .csr-nav-links {
+      display: flex; list-style: none; flex: 1;
+    }
+    .csr-nav-links li a {
+      display: block;
+      padding: 9px 13px;
+      font-size: 12.5px; font-weight: 600;
+      color: rgba(255,255,255,.65);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all .2s;
+    }
+    .csr-nav-links li a:hover,
+    .csr-nav-links li a.active {
+      color: var(--ccl-yellow);
+      border-bottom-color: var(--ccl-yellow);
+    }
+    .csr-projects-cta {
+      background: var(--ccl-yellow);
+      color: var(--ccl-dark);
+      font-size: 12px; font-weight: 800;
+      padding: 7px 18px;
+      border-radius: 3px;
+      text-decoration: none;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .csr-projects-cta:hover { background: var(--ccl-yellow-dk); }
+
+    /* ═══════════════════════════════════════════════
+       CCL YELLOW TICKER (replicates CCL website
+       marquee-style announcement strip)
+    ═══════════════════════════════════════════════ */
+    .ccl-ticker {
+      background: var(--ccl-yellow-lt);
+      border-top: 2px solid var(--ccl-yellow);
+      border-bottom: 2px solid var(--ccl-yellow);
+      padding: 10px 0;
+      overflow: hidden;
+    }
+    .ccl-ticker-inner {
+      display: flex; white-space: nowrap;
+      animation: marquee 52s linear infinite;
+    }
+    .ccl-ticker-inner span {
+      font-size: 13px; font-weight: 700;
+      color: var(--ccl-black);
+      padding: 0 36px;
+      letter-spacing: .03em;
+    }
+    .ccl-ticker-inner span::before {
+      content: "◆ "; font-size: 9px;
+      color: var(--ccl-yellow-dk); opacity: .8;
+    }
+    @keyframes marquee{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ═══════════════════════════════════════════════
+       HERO SECTION — CCL Dark palette
+    ═══════════════════════════════════════════════ */
+    .hero {
+      min-height: 88vh;
+      background: linear-gradient(150deg, #0D0D0D 0%, #1A1A1A 35%, #1E1E1E 65%, #252010 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+    .hero-glow {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 50% 60% at 5% 90%, rgba(245,168,0,.06) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 50% at 92% 15%, rgba(245,168,0,.04) 0%, transparent 60%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; opacity: .025;
+      background-image:
+        linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+    /* Animated circle pulse — CCL yellow */
+    .hero-pulse {
+      position: absolute; right: 7%; bottom: 10%;
+      width: 260px; height: 260px; pointer-events: none;
+    }
+    .pulse-ring {
+      position: absolute; inset: 0; border-radius: 50%;
+      border: 1px solid rgba(245,168,0,.2);
+      animation: expand 4.5s ease-out infinite;
+    }
+    .pulse-ring:nth-child(2){animation-delay:1.5s}
+    .pulse-ring:nth-child(3){animation-delay:3s}
+    @keyframes expand{0%{transform:scale(.3);opacity:.8}100%{transform:scale(1.05);opacity:0}}
+
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1280px; margin: 0 auto;
+      padding: 80px 2rem;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 4rem; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(245,168,0,.1);
+      border: 1px solid rgba(245,168,0,.3);
+      border-radius: 4px;
+      padding: 6px 16px; margin-bottom: 24px;
+    }
+    .eyebrow-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--ccl-yellow);
+      animation: blink 2s infinite;
+    }
+    .hero-eyebrow span {
+      font-size: 11.5px; color: var(--ccl-yellow);
+      font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .hero-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.12; font-weight: 700;
+      color: #fff; margin-bottom: 20px;
+    }
+    .hero-heading em {
+      font-style: italic;
+      background: linear-gradient(90deg, var(--ccl-yellow), #FFD060);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-tagline {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 18px;
+      font-size: 13px; color: rgba(255,255,255,.4);
+      font-style: italic;
+    }
+    .hero-tagline::before, .hero-tagline::after {
+      content: ''; flex: 0 0 28px; height: 1px;
+      background: rgba(245,168,0,.25);
+    }
+    .hero-subtext {
+      font-size: 1.02rem; line-height: 1.8;
+      color: rgba(255,255,255,.55);
+      max-width: 520px; margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--ccl-yellow); color: var(--ccl-dark);
+      padding: 13px 28px; border-radius: 4px;
+      font-size: 14px; font-weight: 800;
+      text-decoration: none; text-transform: uppercase;
+      letter-spacing: .06em;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: all .25s;
+    }
+    .btn-primary:hover {
+      background: var(--ccl-yellow-dk);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245,168,0,.3);
+    }
+    .btn-secondary {
+      background: transparent; color: rgba(255,255,255,.78);
+      padding: 13px 28px; border-radius: 4px;
+      font-size: 14px; font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.2);
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: all .25s; letter-spacing: .04em;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(245,168,0,.5);
+      color: var(--ccl-yellow);
+    }
+    /* Hero stats card */
+    .hero-card {
+      background: rgba(245,168,0,.06);
+      border: 1px solid rgba(245,168,0,.2);
+      border-top: 3px solid var(--ccl-yellow);
+      border-radius: 6px; padding: 28px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-card-title {
+      font-size: 10.5px; font-weight: 800;
+      color: var(--ccl-yellow);
+      letter-spacing: .18em; text-transform: uppercase;
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(245,168,0,.18);
+    }
+    .hero-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hero-stat {
+      padding: 16px; background: rgba(0,0,0,.35);
+      border-radius: 4px; border: 1px solid rgba(255,255,255,.04);
+    }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem; font-weight: 700;
+      color: var(--ccl-yellow);
+      line-height: 1; margin-bottom: 5px;
+    }
+    .hero-stat-label {
+      font-size: 11px; color: rgba(255,255,255,.4);
+      font-weight: 500; line-height: 1.45;
+    }
+    .hero-card-note {
+      margin-top: 14px; font-size: 10.5px;
+      color: rgba(255,255,255,.2);
+      text-align: center; font-style: italic;
+    }
+
+    /* ═══════════════════════════════════════════════
+       GLOBAL SECTION STYLES
+    ═══════════════════════════════════════════════ */
+    section { padding: 84px 2rem; }
+    .container { max-width: 1280px; margin: 0 auto; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 800;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--ccl-yellow-dk); margin-bottom: 12px;
+    }
+    .section-label::before {
+      content: ''; width: 24px; height: 3px;
+      background: var(--ccl-yellow);
+    }
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 700; line-height: 1.2;
+      color: var(--ccl-black); margin-bottom: 14px;
+    }
+    .section-subtext {
+      font-size: .97rem; color: var(--ccl-muted);
+      line-height: 1.8; max-width: 620px;
+    }
+
+    /* ═══════════════════════════════════════════════
+       ABOUT SECTION
+    ═══════════════════════════════════════════════ */
+    #about { background: var(--ccl-white); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .about-facts { display: flex; flex-direction: column; gap: 13px; margin-top: 30px; }
+    .fact-row {
+      display: flex; align-items: flex-start; gap: 15px;
+      padding: 15px 18px;
+      border-radius: 4px;
+      background: var(--ccl-off-white);
+      border-left: 3px solid var(--ccl-yellow);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .fact-row:hover { transform: translateX(5px); box-shadow: 0 3px 14px rgba(0,0,0,.07); }
+    .fact-icon { font-size: 21px; flex-shrink: 0; margin-top: 1px; }
+    .fact-content h4 { font-size: 14px; font-weight: 700; color: var(--ccl-black); margin-bottom: 3px; }
+    .fact-content p { font-size: 12.5px; color: var(--ccl-muted); line-height: 1.55; }
+    .about-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .anc {
+      background: var(--ccl-black);
+      border-radius: 4px; padding: 28px 20px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .anc::after {
+      content: ''; position: absolute;
+      bottom: -24px; right: -24px;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: rgba(245,168,0,.06);
+    }
+    .anc.warm { background: var(--ccl-yellow); }
+    .anc.warm .anc-num, .anc.warm .anc-lbl { color: var(--ccl-dark); }
+    .anc.warm .anc-lbl { opacity: .7; }
+    .anc-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem; font-weight: 900;
+      color: var(--ccl-yellow); line-height: 1;
+    }
+    .anc-lbl {
+      font-size: 11.5px; color: rgba(255,255,255,.5);
+      margin-top: 6px; line-height: 1.45;
+    }
+
+    /* ═══════════════════════════════════════════════
+       IMPACT SECTION — CCL Black
+    ═══════════════════════════════════════════════ */
+    #impact { background: var(--ccl-black); position: relative; overflow: hidden; }
+    #impact::before {
+      content: ''; position: absolute;
+      top: -100px; right: -100px;
+      width: 480px; height: 480px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,168,0,.05) 0%, transparent 65%);
+    }
+    .impact-header { text-align: center; margin-bottom: 52px; }
+    .impact-header .section-label { color: var(--ccl-yellow); justify-content: center; }
+    .impact-header .section-label::before { background: var(--ccl-yellow); }
+    .impact-header .section-heading { color: #fff; }
+    .impact-header .section-subtext { color: rgba(255,255,255,.45); margin: 0 auto; }
+    .impact-grid {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 2px; background: rgba(255,255,255,.04);
+      border-radius: 6px; overflow: hidden;
+    }
+    .impact-cell {
+      padding: 36px 22px; text-align: center;
+      background: rgba(255,255,255,.02);
+      transition: background .3s;
+    }
+    .impact-cell:hover { background: rgba(245,168,0,.06); }
+    .impact-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+      font-weight: 900; color: var(--ccl-yellow);
+      line-height: 1; margin-bottom: 8px;
+    }
+    .impact-unit { font-size: 1.05rem; color: var(--ccl-yellow); }
+    .impact-label { font-size: 12.5px; color: rgba(255,255,255,.45); line-height: 1.5; }
+    .impact-fy { font-size: 10.5px; color: rgba(255,255,255,.2); margin-top: 4px; }
+    .impact-districts {
+      margin-top: 40px;
+      background: rgba(255,255,255,.03);
+      border-radius: 6px; padding: 22px 28px;
+      border: 1px solid rgba(245,168,0,.1);
+    }
+    .district-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .district-label {
+      font-size: 11.5px; color: var(--ccl-yellow);
+      font-weight: 800; text-transform: uppercase;
+      letter-spacing: .1em; flex-shrink: 0;
+    }
+    .district-badge {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 3px; padding: 5px 14px;
+      font-size: 12.5px; color: rgba(255,255,255,.65);
+      transition: all .2s; cursor: default;
+    }
+    .district-badge:hover { background: var(--ccl-yellow); color: var(--ccl-dark); border-color: var(--ccl-yellow); }
+
+    /* ═══════════════════════════════════════════════
+       SECTORS SECTION
+    ═══════════════════════════════════════════════ */
+    #sectors { background: var(--ccl-light-bg); }
+    .sector-legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+    .sl-chip { display: inline-flex; align-items: center; gap: 7px; border-radius: 3px; padding: 6px 14px; font-size: 12px; font-weight: 700; }
+    .sl-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .sectors-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 44px; }
+    .sector-card {
+      background: var(--ccl-white);
+      border-radius: 4px; overflow: hidden;
+      border: 1px solid var(--ccl-border);
+      border-top: none;
+      transition: all .3s; text-decoration: none; display: block;
+    }
+    .sector-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.11); }
+    .sector-bar { height: 4px; width: 100%; }
+    .sector-card[data-sector="edu"] .sector-bar   { background: var(--s-edu); }
+    .sector-card[data-sector="health"] .sector-bar { background: var(--s-health); }
+    .sector-card[data-sector="skill"] .sector-bar  { background: var(--s-skill); }
+    .sector-card[data-sector="sport"] .sector-bar  { background: var(--s-sport); }
+    .sector-card[data-sector="animal"] .sector-bar { background: var(--s-animal); }
+    .sector-card[data-sector="env"] .sector-bar    { background: var(--s-env); }
+    .sc-inner { padding: 22px 22px 0; }
+    .sc-icon { width: 48px; height: 48px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 12px; }
+    .sector-card[data-sector="edu"] .sc-icon   { background: var(--s-edu-bg); }
+    .sector-card[data-sector="health"] .sc-icon { background: var(--s-health-bg); }
+    .sector-card[data-sector="skill"] .sc-icon  { background: var(--s-skill-bg); }
+    .sector-card[data-sector="sport"] .sc-icon  { background: var(--s-sport-bg); }
+    .sector-card[data-sector="animal"] .sc-icon { background: var(--s-animal-bg); }
+    .sector-card[data-sector="env"] .sc-icon    { background: var(--s-env-bg); }
+    .sector-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+    .sector-card[data-sector="edu"] h3   { color: var(--s-edu); }
+    .sector-card[data-sector="health"] h3 { color: var(--s-health); }
+    .sector-card[data-sector="skill"] h3  { color: var(--s-skill); }
+    .sector-card[data-sector="sport"] h3  { color: var(--s-sport); }
+    .sector-card[data-sector="animal"] h3 { color: var(--s-animal); }
+    .sector-card[data-sector="env"] h3    { color: var(--s-env); }
+    .sector-card p { font-size: 13px; color: var(--ccl-muted); line-height: 1.65; margin-bottom: 14px; }
+    .sc-tags { display: flex; flex-wrap: wrap; gap: 5px; padding: 0 22px 18px; }
+    .sc-tag { border-radius: 3px; padding: 3px 10px; font-size: 11px; font-weight: 700; }
+    .sector-card[data-sector="edu"] .sc-tag   { background: var(--s-edu-bg); color: var(--s-edu); }
+    .sector-card[data-sector="health"] .sc-tag { background: var(--s-health-bg); color: var(--s-health); }
+    .sector-card[data-sector="skill"] .sc-tag  { background: var(--s-skill-bg); color: var(--s-skill); }
+    .sector-card[data-sector="sport"] .sc-tag  { background: var(--s-sport-bg); color: var(--s-sport); }
+    .sector-card[data-sector="animal"] .sc-tag { background: var(--s-animal-bg); color: var(--s-animal); }
+    .sector-card[data-sector="env"] .sc-tag    { background: var(--s-env-bg); color: var(--s-env); }
+    .sc-footer { padding: 12px 22px; border-top: 1px solid var(--ccl-border); display: flex; align-items: center; justify-content: space-between; }
+    .sc-footer span { font-size: 12px; color: var(--ccl-muted); }
+    .sc-arrow { font-size: 17px; }
+    .sector-card[data-sector="edu"] .sc-arrow   { color: var(--s-edu); }
+    .sector-card[data-sector="health"] .sc-arrow { color: var(--s-health); }
+    .sector-card[data-sector="skill"] .sc-arrow  { color: var(--s-skill); }
+    .sector-card[data-sector="sport"] .sc-arrow  { color: var(--s-sport); }
+    .sector-card[data-sector="animal"] .sc-arrow { color: var(--s-animal); }
+    .sector-card[data-sector="env"] .sc-arrow    { color: var(--s-env); }
+
+    /* ═══════════════════════════════════════════════
+       EXPENDITURE SECTION
+    ═══════════════════════════════════════════════ */
+    #expenditure { background: var(--ccl-white); }
+    .exp-layout { display: grid; grid-template-columns: 1fr 330px; gap: 40px; align-items: start; }
+    .exp-summary-strip {
+      display: flex; gap: 22px; margin-bottom: 22px;
+      padding: 16px 18px;
+      background: var(--ccl-yellow-lt);
+      border: 1px solid rgba(245,168,0,.3);
+      border-left: 4px solid var(--ccl-yellow);
+      border-radius: 4px; flex-wrap: wrap;
+    }
+    .ess { display: flex; flex-direction: column; gap: 2px; }
+    .ess-val { font-family: 'DM Mono', monospace; font-size: 1.05rem; font-weight: 700; }
+    .ess-lbl { font-size: 11px; color: var(--ccl-muted); text-transform: uppercase; letter-spacing: .07em; }
+    .black-val { color: var(--ccl-black); }
+    .amber-val { color: var(--ccl-yellow-dk); }
+    .exp-legend { display: flex; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+    .exp-legend-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--ccl-muted); font-weight: 600; }
+    .exp-swatch { width: 16px; height: 16px; border-radius: 2px; flex-shrink: 0; }
+    .bar-chart { display: flex; flex-direction: column; gap: 10px; }
+    .bar-row { display: grid; grid-template-columns: 62px 1fr 22px 118px; gap: 10px; align-items: center; }
+    .bar-year { font-size: 11.5px; color: var(--ccl-muted); font-weight: 700; text-align: right; white-space: nowrap; }
+    .bar-row.exceeded .bar-year { color: #1A7A3A; }
+    .bar-row.latest .bar-year { color: var(--ccl-yellow-dk); font-weight: 800; }
+    .bar-track { position: relative; height: 28px; background: var(--ccl-light-bg); border-radius: 3px; overflow: visible; }
+    .bar-mandatory { position: absolute; top: 0; left: 0; height: 100%; border-radius: 3px; background: transparent; border: 2px dashed rgba(90,90,90,.3); z-index: 1; pointer-events: none; }
+    .bar-base {
+      position: absolute; top: 0; left: 0; height: 100%;
+      border-radius: 3px 0 0 3px;
+      background: linear-gradient(90deg, #1A5E2A, #2E8B4A);
+      z-index: 2; transition: width 1.3s cubic-bezier(.22,1,.36,1);
+      display: flex; align-items: center;
+      padding-left: 8px; font-size: 10.5px; font-weight: 700;
+      color: rgba(255,255,255,.9); overflow: hidden; white-space: nowrap;
+    }
+    .bar-base.full-radius { border-radius: 3px; }
+    .bar-base.below-style { background: linear-gradient(90deg, #7A7A7A, #9A9A9A); }
+    .bar-surplus {
+      position: absolute; top: 0; height: 100%;
+      background: linear-gradient(90deg, var(--ccl-yellow-dk), var(--ccl-yellow));
+      z-index: 2; border-radius: 0 3px 3px 0;
+      transition: width 1.3s cubic-bezier(.22,1,.36,1), left 1.3s cubic-bezier(.22,1,.36,1);
+    }
+    .bar-row.latest .bar-base { background: linear-gradient(90deg, #C4880A, #E8A00A); }
+    .bar-row.latest .bar-surplus { background: linear-gradient(90deg, var(--ccl-yellow), #FFD060); }
+    .bar-badge { font-size: 15px; text-align: center; line-height: 1; }
+    .bar-amt-col { display: flex; flex-direction: column; gap: 2px; }
+    .bar-actual { font-family: 'DM Mono', monospace; font-size: 11.5px; font-weight: 700; color: var(--ccl-black); }
+    .bar-diff { font-family: 'DM Mono', monospace; font-size: 9.5px; font-weight: 700; }
+    .bar-diff.surplus-lbl { color: #1A7A3A; }
+    .bar-diff.below-lbl { color: var(--ccl-muted); }
+    .exp-chart-note {
+      margin-top: 14px; padding: 12px 16px;
+      background: var(--ccl-yellow-lt);
+      border-radius: 4px;
+      border-left: 3px solid var(--ccl-yellow);
+      font-size: 11.5px; color: var(--ccl-muted); line-height: 1.65;
+    }
+    /* Expenditure side panel */
+    .exp-panel {
+      background: var(--ccl-black);
+      border-radius: 4px; padding: 28px;
+      border-top: 4px solid var(--ccl-yellow);
+      position: sticky; top: 110px;
+    }
+    .exp-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; color: var(--ccl-yellow);
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(245,168,0,.18);
+    }
+    .esr { display: flex; justify-content: space-between; align-items: baseline; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+    .esr:last-of-type { border: none; }
+    .esr-lbl { font-size: 12px; color: rgba(255,255,255,.42); }
+    .esr-val { font-family: 'DM Mono', monospace; font-size: 13.5px; font-weight: 700; color: #fff; }
+    .esr-val.big { font-size: 1.7rem; color: var(--ccl-yellow); font-family: 'Playfair Display', serif; }
+    .exp-note { margin-top: 16px; background: rgba(245,168,0,.07); border-radius: 4px; padding: 12px; border: 1px solid rgba(245,168,0,.12); }
+    .exp-note p { font-size: 11.5px; color: rgba(255,255,255,.38); line-height: 1.65; }
+
+    /* ═══════════════════════════════════════════════
+       CSR POLICY SECTION
+    ═══════════════════════════════════════════════ */
+    #policy { background: var(--ccl-light-bg); padding: 84px 2rem; }
+    .policy-compliance-strip { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+    .pcs-pill {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--ccl-white);
+      border: 1px solid var(--ccl-border);
+      border-top: 3px solid var(--ccl-yellow);
+      border-radius: 4px; padding: 14px 16px;
+      flex: 1; min-width: 175px;
+    }
+    .pcs-pill .pnum { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--ccl-yellow-dk); line-height: 1; }
+    .pcs-pill .ptext { display: flex; flex-direction: column; gap: 2px; }
+    .pcs-pill .ptext strong { font-size: 12.5px; font-weight: 700; color: var(--ccl-black); }
+    .pcs-pill .ptext span { font-size: 11px; color: var(--ccl-muted); line-height: 1.4; }
+    .pcs-pill .pdot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; flex-shrink: 0; margin-left: auto; }
+    .policy-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+    .policy-committee { background: var(--ccl-black); border-radius: 4px; padding: 28px; color: #fff; border-top: 4px solid var(--ccl-yellow); }
+    .policy-committee h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--ccl-yellow); margin-bottom: 6px; }
+    .policy-committee .sub { font-size: 11.5px; color: rgba(255,255,255,.38); margin-bottom: 20px; line-height: 1.5; }
+    .committee-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .committee-row:last-child { border: none; }
+    .cr-num { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.07); display: flex; align-items: center; justify-content: center; font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,.45); flex-shrink: 0; }
+    .cr-body { flex: 1; }
+    .cr-role { font-size: 12.5px; font-weight: 700; color: #fff; line-height: 1.3; }
+    .cr-cat { font-size: 10.5px; color: rgba(255,255,255,.35); margin-top: 1px; }
+    .cr-badge { padding: 3px 9px; border-radius: 3px; font-size: 10px; font-weight: 800; letter-spacing: .04em; flex-shrink: 0; }
+    .cr-badge.chair { background: rgba(245,168,0,.2); color: var(--ccl-yellow); }
+    .cr-badge.mem   { background: rgba(255,255,255,.07); color: rgba(255,255,255,.5); }
+    .cr-badge.ind   { background: rgba(245,168,0,.12); color: #FFD060; }
+    .cr-badge.sec   { background: rgba(34,197,94,.12); color: #86efac; }
+    .committee-footer { margin-top: 16px; padding: 11px 13px; background: rgba(0,0,0,.25); border-radius: 4px; font-size: 11px; color: rgba(255,255,255,.28); line-height: 1.6; }
+    .policy-action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .par-card { background: var(--ccl-white); border-radius: 4px; border: 1px solid var(--ccl-border); padding: 14px 16px; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: all .2s; }
+    .par-card:hover { border-color: var(--ccl-yellow); box-shadow: 0 4px 16px rgba(245,168,0,.12); transform: translateY(-2px); }
+    .par-icon { width: 34px; height: 34px; border-radius: 4px; background: var(--ccl-yellow-lt); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+    .par-body strong { display: block; font-size: 12.5px; font-weight: 700; color: var(--ccl-black); line-height: 1.3; }
+    .par-body span { font-size: 11px; color: var(--ccl-muted); }
+    .par-arrow { margin-left: auto; color: var(--ccl-yellow-dk); font-size: 15px; flex-shrink: 0; }
+    .policy-docs-panel { display: flex; flex-direction: column; gap: 11px; }
+    .policy-doc-group { background: var(--ccl-white); border-radius: 4px; border: 1px solid var(--ccl-border); overflow: hidden; }
+    .pdg-header { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid var(--ccl-border); }
+    .pdg-icon { width: 34px; height: 34px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+    .pdg-icon.gold   { background: var(--ccl-yellow-lt); }
+    .pdg-icon.dark   { background: rgba(26,26,26,.07); }
+    .pdg-icon.blue   { background: #EFF6FF; }
+    .pdg-title { font-size: 13px; font-weight: 700; color: var(--ccl-black); }
+    .pdg-count { margin-left: auto; font-size: 11px; font-weight: 700; background: var(--ccl-light-bg); color: var(--ccl-muted); padding: 2px 8px; border-radius: 10px; }
+    .pdg-list { padding: 4px 0; }
+    .pdg-link { display: flex; align-items: center; gap: 10px; padding: 9px 18px; text-decoration: none; transition: background .18s; }
+    .pdg-link:hover { background: var(--ccl-yellow-lt); }
+    .pdg-link .dl-icon { font-size: 13px; flex-shrink: 0; }
+    .pdg-link .dl-name { font-size: 12.5px; color: var(--ccl-text); line-height: 1.35; flex: 1; }
+    .pdg-link .dl-tag { font-size: 10px; font-weight: 800; padding: 2px 7px; border-radius: 3px; flex-shrink: 0; }
+    .dl-tag.new { background: rgba(220,38,38,.1); color: #DC2626; }
+    .dl-tag.pdf { background: var(--ccl-light-bg); color: var(--ccl-muted); }
+    .dl-tag.gov { background: var(--ccl-yellow-lt); color: var(--ccl-yellow-dk); }
+    .policy-cta {
+      margin-top: 36px;
+      background: var(--ccl-black);
+      border-radius: 4px; padding: 28px 32px;
+      border-top: 4px solid var(--ccl-yellow);
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .policy-cta-text h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #fff; margin-bottom: 6px; }
+    .policy-cta-text p { font-size: 13px; color: rgba(255,255,255,.42); line-height: 1.6; }
+    .policy-cta-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .pc-badge-item { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09); border-radius: 3px; padding: 4px 11px; font-size: 11px; color: rgba(255,255,255,.5); }
+    .pc-badge-item .dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; }
+    .policy-cta-btn { background: var(--ccl-yellow); color: var(--ccl-dark); padding: 12px 24px; border-radius: 4px; font-size: 13.5px; font-weight: 800; text-decoration: none; white-space: nowrap; transition: all .2s; flex-shrink: 0; text-transform: uppercase; letter-spacing: .05em; }
+    .policy-cta-btn:hover { background: var(--ccl-yellow-dk); transform: translateY(-2px); }
+
+    /* ═══════════════════════════════════════════════
+       PROJECTS SECTION
+    ═══════════════════════════════════════════════ */
+    #projects { background: var(--ccl-light-bg); }
+    .projects-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; margin-top: 44px; }
+    .project-card {
+      background: var(--ccl-white);
+      border-radius: 4px; overflow: hidden;
+      border: 1px solid var(--ccl-border);
+      transition: all .3s;
+    }
+    .project-card:hover { box-shadow: 0 16px 40px rgba(0,0,0,.09); transform: translateY(-4px); }
+    .project-card[data-sector="edu"]    { border-left: 4px solid var(--s-edu); }
+    .project-card[data-sector="health"] { border-left: 4px solid var(--s-health); }
+    .project-card[data-sector="skill"]  { border-left: 4px solid var(--s-skill); }
+    .project-card[data-sector="sport"]  { border-left: 4px solid var(--s-sport); }
+    .pc-inner { padding: 24px; }
+    .pc-tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 3px; padding: 4px 11px; font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 11px; }
+    .project-card[data-sector="edu"] .pc-tag    { background: var(--s-edu-bg); color: var(--s-edu); }
+    .project-card[data-sector="health"] .pc-tag { background: var(--s-health-bg); color: var(--s-health); }
+    .project-card[data-sector="skill"] .pc-tag  { background: var(--s-skill-bg); color: var(--s-skill); }
+    .project-card[data-sector="sport"] .pc-tag  { background: var(--s-sport-bg); color: var(--s-sport); }
+    .project-card h3 { font-family: 'Playfair Display', serif; font-size: 1.07rem; font-weight: 700; color: var(--ccl-black); margin-bottom: 9px; line-height: 1.35; }
+    .project-card p { font-size: 13px; color: var(--ccl-muted); line-height: 1.7; }
+    .pc-meta { display: flex; gap: 18px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--ccl-border); }
+    .pcm { display: flex; flex-direction: column; gap: 2px; }
+    .pcm-lbl { font-size: 9.5px; color: var(--ccl-muted); font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+    .pcm-val { font-size: 13.5px; font-weight: 700; color: var(--ccl-black); font-family: 'DM Mono', monospace; }
+    .pc-badge { display: inline-flex; align-items: center; gap: 5px; margin-top: 11px; background: var(--ccl-yellow-lt); border: 1px solid rgba(245,168,0,.25); border-radius: 3px; padding: 4px 11px; font-size: 11.5px; color: var(--ccl-yellow-dk); font-weight: 600; }
+
+    /* ═══════════════════════════════════════════════
+       STORIES SECTION
+    ═══════════════════════════════════════════════ */
+    #stories { background: var(--ccl-white); }
+    .stories-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 44px; }
+    .story-card { border-radius: 4px; overflow: hidden; border: 1px solid var(--ccl-border); transition: all .3s; background: var(--ccl-off-white); }
+    .story-card:hover { box-shadow: 0 14px 36px rgba(0,0,0,.09); transform: translateY(-4px); }
+    .story-photo { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 52px; }
+    .sp-edu    { background: linear-gradient(135deg, var(--s-edu-bg), #BFDBFE); }
+    .sp-health { background: linear-gradient(135deg, var(--s-health-bg), #FECACA); }
+    .sp-skill  { background: linear-gradient(135deg, var(--s-skill-bg), #FDE68A); }
+    .story-body { padding: 18px 20px 20px; }
+    .story-body h4 { font-family: 'Playfair Display', serif; font-size: .97rem; font-weight: 700; color: var(--ccl-black); margin-bottom: 6px; }
+    .story-body p { font-size: 12.5px; color: var(--ccl-muted); line-height: 1.65; }
+    .story-loc { font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-top: 11px; }
+    .loc-edu { color: var(--s-edu); } .loc-health { color: var(--s-health); } .loc-skill { color: var(--s-skill); }
+
+    /* ═══════════════════════════════════════════════
+       AWARDS SECTION — CCL Black
+    ═══════════════════════════════════════════════ */
+    #awards { background: var(--ccl-black); }
+    .awards-header { text-align: center; margin-bottom: 44px; }
+    .awards-header .section-heading { color: #fff; }
+    .awards-header .section-label { color: var(--ccl-yellow); justify-content: center; }
+    .awards-header .section-label::before { background: var(--ccl-yellow); }
+    .awards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .award-card { background: rgba(255,255,255,.03); border: 1px solid rgba(245,168,0,.12); border-top: 3px solid var(--ccl-yellow); border-radius: 4px; padding: 26px; transition: all .3s; }
+    .award-card:hover { background: rgba(245,168,0,.07); border-color: rgba(245,168,0,.3); transform: translateY(-4px); }
+    .award-medal { font-size: 26px; margin-bottom: 13px; display: block; }
+    .award-card h4 { font-family: 'Playfair Display', serif; font-size: .97rem; font-weight: 700; color: #fff; margin-bottom: 7px; line-height: 1.4; }
+    .award-card p { font-size: 12.5px; color: rgba(255,255,255,.4); line-height: 1.55; }
+    .award-year { display: inline-block; margin-top: 11px; font-size: 11px; font-weight: 800; color: var(--ccl-yellow); letter-spacing: .1em; }
+
+    /* ═══════════════════════════════════════════════
+       QUICKLINKS SECTION
+    ═══════════════════════════════════════════════ */
+    #quicklinks { background: var(--ccl-light-bg); padding: 60px 2rem; }
+    .quicklinks-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+    .ql {
+      background: var(--ccl-white);
+      border-radius: 4px; padding: 22px;
+      text-decoration: none;
+      border: 1px solid var(--ccl-border);
+      border-bottom: 3px solid transparent;
+      transition: all .25s;
+      display: flex; flex-direction: column; gap: 9px;
+    }
+    .ql:hover { box-shadow: 0 6px 24px rgba(0,0,0,.09); transform: translateY(-4px); border-color: var(--ccl-yellow); }
+    .ql-icon { font-size: 26px; }
+    .ql h4 { font-size: 14px; font-weight: 700; }
+    .ql p { font-size: 11.5px; color: var(--ccl-muted); line-height: 1.5; }
+    .ql-arrow { font-size: 17px; margin-top: auto; }
+
+    /* ═══════════════════════════════════════════════
+       CCL FOOTER — Exact match from screenshot
+       Dark background + Yellow bottom strip
+    ═══════════════════════════════════════════════ */
+    .ccl-footer {
+      background: #1A1A1A;
+    }
+    .ccl-footer-main {
+      max-width: 1280px; margin: 0 auto;
+      padding: 48px 2rem 32px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+    }
+    /* Section headers with yellow underline — matches CCL footer */
+    .cf-col h3 {
+      font-size: 14px; font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 6px;
+    }
+    .cf-col h3 + .cf-underline {
+      width: 42px; height: 3px;
+      background: var(--ccl-yellow);
+      margin-bottom: 20px;
+    }
+    .cf-brand p {
+      font-size: 12.5px; color: rgba(255,255,255,.32);
+      line-height: 1.8; margin-top: 14px;
+    }
+    .cf-brand-cin {
+      font-size: 11px; color: rgba(255,255,255,.18);
+      margin-top: 16px; line-height: 1.6;
+    }
+    /* Quick links */
+    .cf-col ul { list-style: none; }
+    .cf-col ul li { margin-bottom: 10px; }
+    .cf-col ul li a {
+      font-size: 13px; color: rgba(255,255,255,.4);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 7px;
+      transition: color .2s;
+    }
+    .cf-col ul li a::before {
+      content: "›"; color: var(--ccl-yellow);
+      font-size: 15px; line-height: 1;
+    }
+    .cf-col ul li a:hover { color: var(--ccl-yellow); }
+    /* Contact block */
+    .cf-contact-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .cf-contact-icon {
+      width: 30px; height: 30px;
+      background: rgba(245,168,0,.12);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; flex-shrink: 0; margin-top: 2px;
+    }
+    .cf-contact-text { font-size: 12.5px; color: rgba(255,255,255,.42); line-height: 1.65; }
+    .cf-contact-text strong { display: block; color: rgba(255,255,255,.7); margin-bottom: 2px; font-size: 13px; }
+
+    /* CSR Division highlight box inside footer */
+    .cf-csr-box {
+      background: rgba(245,168,0,.07);
+      border: 1px solid rgba(245,168,0,.18);
+      border-radius: 4px;
+      padding: 14px 16px;
+      margin-top: 20px;
+    }
+    .cf-csr-box p {
+      font-size: 11.5px; color: rgba(255,255,255,.42); line-height: 1.65;
+      margin-top: 0 !important;
+    }
+    .cf-csr-box strong { color: var(--ccl-yellow); }
+
+    /* CCL Yellow bottom strip — exact match */
+    .ccl-footer-strip {
+      background: var(--ccl-yellow);
+      padding: 10px 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .ccl-footer-strip p {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ccl-dark);
+      letter-spacing: .02em;
+    }
+    .ccl-footer-strip .strip-links {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .ccl-footer-strip .strip-links a {
+      font-size: 12px; font-weight: 700;
+      color: var(--ccl-dark); text-decoration: none;
+      border-left: 2px solid rgba(0,0,0,.2);
+      padding-left: 10px;
+      transition: opacity .2s;
+    }
+    .ccl-footer-strip .strip-links a:first-child { border: none; padding: 0; }
+    .ccl-footer-strip .strip-links a:hover { opacity: .7; }
+    .ccl-footer-strip .visitor-box {
+      background: var(--ccl-dark);
+      color: var(--ccl-yellow);
+      font-size: 12.5px; font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 2px;
+      letter-spacing: .12em;
+      font-family: 'DM Mono', monospace;
+    }
+
+    /* ANIMATIONS */
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════ */
+    @media(max-width:1100px){
+      .hero-content{ grid-template-columns:1fr }
+      .hero-card, .hero-pulse{ display:none }
+      .about-grid, .exp-layout, .policy-layout{ grid-template-columns:1fr }
+      .sectors-grid{ grid-template-columns:repeat(2,1fr) }
+      .impact-grid{ grid-template-columns:repeat(2,1fr) }
+      .awards-grid{ grid-template-columns:repeat(2,1fr) }
+      .quicklinks-grid{ grid-template-columns:repeat(2,1fr) }
+      .ccl-footer-main{ grid-template-columns:1fr 1fr }
+      .stories-grid{ grid-template-columns:1fr 1fr }
+      .ccl-nav-links{ display:none }
+    }
+    @media(max-width:700px){
+      .sectors-grid,.projects-grid,.stories-grid{ grid-template-columns:1fr }
+      .impact-grid{ grid-template-columns:1fr 1fr }
+      .awards-grid,.quicklinks-grid{ grid-template-columns:1fr 1fr }
+      .ccl-footer-main{ grid-template-columns:1fr }
+      .bar-row{ grid-template-columns:52px 1fr 18px 90px }
+      .policy-compliance-strip{ flex-direction:column }
+      .policy-cta{ flex-direction:column;text-align:center }
+      .csr-nav-links{ display:none }
+      .ccl-footer-strip{ flex-direction:column; text-align:center }
+      .policy-action-row{ grid-template-columns:1fr }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     CCL MAIN HEADER — Authentic CCL Structure
+     (Systems Dept. will replace this section
+      with their standard PHP include)
+═══════════════════════════════════════════ -->
+<header class="ccl-header">
+
+  <!-- Top utility bar: social icons, language, help -->
+  <div class="ccl-utility-bar">
+    <div class="ccl-util-icons">
+      <a href="https://www.centralcoalfields.in" class="ccl-util-icon u-home" title="CCL Homepage">⌂</a>
+      <a href="https://www.centralcoalfields.in/ind/vigilance.php" class="ccl-util-icon u-shield" title="Vigilance">🛡</a>
+      <a href="#" class="ccl-util-icon u-fb" title="Facebook">f</a>
+      <a href="#" class="ccl-util-icon u-tw" title="Twitter">𝕏</a>
+      <a href="#" class="ccl-util-icon u-ig" title="Instagram">⬤</a>
+      <a href="#" class="ccl-util-icon u-li" title="LinkedIn">in</a>
+      <a href="#" class="ccl-util-icon u-yt" title="YouTube">▶</a>
+    </div>
+    <div class="ccl-util-divider"></div>
+    <span class="ccl-util-lang">हिन्दी</span>
+    <div class="ccl-util-divider"></div>
+    <a href="https://www.centralcoalfields.in/ind/help.php" class="ccl-util-link">Help</a>
+  </div>
+
+  <!-- Main yellow nav bar -->
+  <div class="ccl-main-nav">
+    <!-- Logo on dark diagonal panel -->
+    <div class="ccl-logo-wrap">
+      <a href="https://www.centralcoalfields.in" class="ccl-logo-inner">
+        <div class="ccl-logo-emblem">
+          <span class="ccl-logo-ccl">CCL</span>
+        </div>
+        <div class="ccl-logo-tagline">
+          <span class="t1">CCL</span>
+          <span class="t2">Fuelling Sustainable Growth</span>
+        </div>
+      </a>
+    </div>
+    <!-- Main nav links on yellow -->
+    <ul class="ccl-nav-links">
+      <li><a href="https://www.centralcoalfields.in/ind/about.php">About Us <span class="nav-arrow">▾</span></a></li>
+      <li><a href="https://www.centralcoalfields.in/ind/performance.php">Performance <span class="nav-arrow">▾</span></a></li>
+      <li><a href="https://www.centralcoalfields.in/ind/business.php">Business <span class="nav-arrow">▾</span></a></li>
+      <li><a href="https://www.centralcoalfields.in/ind/sustainability.php">Sustainability <span class="nav-arrow">▾</span></a></li>
+      <li><a href="https://www.centralcoalfields.in/ind/vigilance.php">Vigilance <span class="nav-arrow">▾</span></a></li>
+      <li><a href="https://www.centralcoalfields.in/ind/info_desk.php">Info Desk <span class="nav-arrow">▾</span></a></li>
+      <li><a href="https://www.centralcoalfields.in/ind/czone.php">CZone <span class="nav-arrow">▾</span></a></li>
+      <li><a href="https://www.centralcoalfields.in/ind/more.php">More... <span class="nav-arrow">▾</span></a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ CSR SUB-NAV ═══
+       This thin bar is the CSR section's own
+       navigation — replaces the old full CSR header
+  ════════════════════════ -->
+  <div class="csr-subnav">
+    <div class="csr-subnav-inner">
+      <div class="csr-id">
+        <div class="csr-id-dot"></div>
+        <span class="csr-id-text">CSR Division</span>
+      </div>
+      <ul class="csr-nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#sectors">Sectors</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#expenditure">Expenditure</a></li>
+        <li><a href="#policy">CSR Policy</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="projects.html" class="csr-projects-cta">All 377 Projects →</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-pulse">
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring"></div>
+    <div class="pulse-ring"></div>
+  </div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-eyebrow">
+        <div class="eyebrow-dot"></div>
+        <span>FY 2025–26 &nbsp;·&nbsp; Jharkhand, India</span>
+      </div>
+      <h1 class="hero-heading">Transforming Lives<br/>Across <em>Jharkhand's</em><br/>Coalfields</h1>
+      <div class="hero-tagline">From coalfields to classrooms, clinics, and champions</div>
+      <p class="hero-subtext">Central Coalfields Limited invests in the communities that power India — through education, healthcare, skill development, sports, and sustainable livelihoods across 8 Aspirational Districts of Jharkhand.</p>
+      <div class="hero-actions">
+        <a href="#sectors" class="btn-primary">Explore Our Work →</a>
+        <a href="#expenditure" class="btn-secondary">CSR Expenditure</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">FY 2024–25 at a Glance</div>
+      <div class="hero-stat-grid">
+        <div class="hero-stat">
+          <div class="hero-stat-num">₹81.11<span style="font-size:.95rem"> Cr</span></div>
+          <div class="hero-stat-label">Total CSR Expenditure</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">377</div>
+          <div class="hero-stat-label">Projects Executed</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2.37L</div>
+          <div class="hero-stat-label">Health Camp Beneficiaries</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">8</div>
+          <div class="hero-stat-label">Aspirational Districts</div>
+        </div>
+      </div>
+      <p class="hero-card-note">All figures verified · Annual Report 2024–25</p>
+    </div>
+  </div>
+</section>
+
+<!-- CCL-STYLE TICKER -->
+<div class="ccl-ticker" aria-hidden="true">
+  <div class="ccl-ticker-inner">
+    <span>₹683.44 Cr Total CSR Spend Since 2014</span>
+    <span>194 Students in IITs &amp; NITs via CCL Ke Lal &amp; Laadli</span>
+    <span>1,809 Medals Won by Sports Academy Athletes</span>
+    <span>673 Health Camps · 2,37,594 Beneficiaries · FY 2024–25</span>
+    <span>193 Govt. Schools Digitised · Project Digital Vidya</span>
+    <span>Diamond Tier — Corporate TB Pledge · Nikshay Mitra</span>
+    <span>2× National CSR Award — Ministry of Corporate Affairs</span>
+    <span>₹683.44 Cr Total CSR Spend Since 2014</span>
+    <span>194 Students in IITs &amp; NITs via CCL Ke Lal &amp; Laadli</span>
+    <span>1,809 Medals Won by Sports Academy Athletes</span>
+    <span>673 Health Camps · 2,37,594 Beneficiaries · FY 2024–25</span>
+    <span>193 Govt. Schools Digitised · Project Digital Vidya</span>
+    <span>Diamond Tier — Corporate TB Pledge · Nikshay Mitra</span>
+    <span>2× National CSR Award — Ministry of Corporate Affairs</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-label">About CCL</div>
+        <h2 class="section-heading">A Mini-Ratna Powering India's Growth</h2>
+        <p class="section-subtext">Central Coalfields Limited, a Mini-Ratna subsidiary of Coal India Limited, extracted 87.50 Million Tonnes in FY 2024–25 and contributed ₹4,300 crore to Jharkhand through royalties, DMF, and taxes. Our CSR programme channels this strength into the communities we operate within.</p>
+        <div class="about-facts">
+          <div class="fact-row"><span class="fact-icon">⛏️</span><div class="fact-content"><h4>38 Active Mines across 6 Coalfields &amp; 14 Areas</h4><p>3 Underground &amp; 35 Opencast mines, 5 Washeries spanning the length of Jharkhand.</p></div></div>
+          <div class="fact-row"><span class="fact-icon">🏥</span><div class="fact-content"><h4>Comprehensive In-house Healthcare</h4><p>4 Central Hospitals, 8 Area Hospitals, 26 Dispensaries, 694 beds and 73 ambulances.</p></div></div>
+          <div class="fact-row"><span class="fact-icon">📋</span><div class="fact-content"><h4>Board-driven, Rule-compliant CSR Governance</h4><p>35 CD Cadre officers, independent impact assessments by TERI &amp; IICA, CAG audit with zero paras.</p></div></div>
+          <div class="fact-row"><span class="fact-icon">🗺️</span><div class="fact-content"><h4>All 8 Districts are NITI Aayog Aspirational Districts</h4><p>Chatra, Latehar, Palamu, Giridih, Hazaribagh, Bokaro, Ranchi and Ramgarh — among India's 112 Aspirational Districts.</p></div></div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="anc"><div class="anc-num">87.5 MT</div><div class="anc-lbl">Coal Extracted<br/>FY 2024–25</div></div>
+        <div class="anc warm"><div class="anc-num">₹4,300 Cr</div><div class="anc-lbl">Contribution to<br/>Jharkhand State</div></div>
+        <div class="anc"><div class="anc-num">35</div><div class="anc-lbl">CSR Officers across<br/>all CCL Areas</div></div>
+        <div class="anc"><div class="anc-num">2014</div><div class="anc-lbl">Year CCL's structured<br/>CSR programme began</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="container">
+    <div class="impact-header reveal">
+      <div class="section-label">Our Impact</div>
+      <h2 class="section-heading">Numbers That Tell the Real Story</h2>
+      <p class="section-subtext">From ₹47.88 lakh to ₹81.11 crore — a decade of compounding impact across Jharkhand's coalfields.</p>
+    </div>
+    <div class="impact-grid reveal">
+      <div class="impact-cell"><div class="impact-num">₹<span class="count-up" data-target="683">0</span><span class="impact-unit"> Cr</span></div><div class="impact-label">Total CSR Spent<br/>2014–2025</div><div class="impact-fy">Across 11 Financial Years</div></div>
+      <div class="impact-cell"><div class="impact-num"><span class="count-up" data-target="377">0</span></div><div class="impact-label">Projects Executed<br/>FY 2024–25</div><div class="impact-fy">All 8 districts</div></div>
+      <div class="impact-cell"><div class="impact-num"><span class="count-up" data-target="237594">0</span></div><div class="impact-label">Health Camp<br/>Beneficiaries</div><div class="impact-fy">673 camps · FY 2024–25</div></div>
+      <div class="impact-cell"><div class="impact-num"><span class="count-up" data-target="194">0</span></div><div class="impact-label">Students in IITs/NITs<br/>via Ke Lal &amp; Laadli</div><div class="impact-fy">Since 2012</div></div>
+      <div class="impact-cell"><div class="impact-num"><span class="count-up" data-target="1809">0</span></div><div class="impact-label">Medals Won by<br/>Sports Academy</div><div class="impact-fy">15 International</div></div>
+      <div class="impact-cell"><div class="impact-num"><span class="count-up" data-target="193">0</span></div><div class="impact-label">Govt. Schools<br/>Digitised</div><div class="impact-fy">8 Districts · Digital Vidya</div></div>
+      <div class="impact-cell"><div class="impact-num"><span class="count-up" data-target="30768">0</span></div><div class="impact-label">Children Screened<br/>for Heart Disease</div><div class="impact-fy">Nanha Sa Dil · 2025–26</div></div>
+      <div class="impact-cell"><div class="impact-num"><span class="count-up" data-target="50000">0</span></div><div class="impact-label">Students to Receive<br/>Mid-Day Meals</div><div class="impact-fy">Centralised Kitchen · Ramgarh</div></div>
+    </div>
+    <div class="impact-districts reveal">
+      <div class="district-row">
+        <span class="district-label">8 Aspirational Districts ▸</span>
+        <span class="district-badge">Ranchi</span><span class="district-badge">Ramgarh</span><span class="district-badge">Hazaribagh</span><span class="district-badge">Bokaro</span><span class="district-badge">Chatra</span><span class="district-badge">Giridih</span><span class="district-badge">Latehar</span><span class="district-badge">Palamu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">CSR Sectors</div>
+      <h2 class="section-heading">Six Pillars of Community Investment</h2>
+      <p class="section-subtext">Guided by DPE guidelines with 60% spend on notified themes, CCL's CSR spans six distinct pillars — each with its own colour identity and dedicated programme page.</p>
+      <div class="sector-legend" aria-label="Sector colour guide">
+        <span class="sl-chip" style="background:var(--s-edu-bg);color:var(--s-edu)"><span class="sl-dot" style="background:var(--s-edu)"></span>Education</span>
+        <span class="sl-chip" style="background:var(--s-health-bg);color:var(--s-health)"><span class="sl-dot" style="background:var(--s-health)"></span>Health</span>
+        <span class="sl-chip" style="background:var(--s-skill-bg);color:var(--s-skill)"><span class="sl-dot" style="background:var(--s-skill)"></span>Skill &amp; Livelihood</span>
+        <span class="sl-chip" style="background:var(--s-sport-bg);color:var(--s-sport)"><span class="sl-dot" style="background:var(--s-sport)"></span>Sports</span>
+        <span class="sl-chip" style="background:var(--s-animal-bg);color:var(--s-animal)"><span class="sl-dot" style="background:var(--s-animal)"></span>Animal Welfare</span>
+        <span class="sl-chip" style="background:var(--s-env-bg);color:var(--s-env)"><span class="sl-dot" style="background:var(--s-env)"></span>Just Transition</span>
+      </div>
+    </div>
+    <div class="sectors-grid">
+      <a href="education.html" class="sector-card reveal" data-sector="edu"><div class="sector-bar"></div><div class="sc-inner"><div class="sc-icon">📚</div><h3>Education</h3><p>From village schools to IIT lecture halls — technology, mentorship and world-class coaching by IITian officers.</p></div><div class="sc-tags"><span class="sc-tag">CCL Ke Lal &amp; Laadli</span><span class="sc-tag">Project Digital Vidya</span><span class="sc-tag">State Library, Ranchi</span></div><div class="sc-footer"><span>₹26.13 Cr flagship · 193 schools</span><span class="sc-arrow">→</span></div></a>
+      <a href="health.html" class="sector-card reveal" data-sector="health"><div class="sector-bar"></div><div class="sc-inner"><div class="sc-icon">🏥</div><h3>Health &amp; Nutrition</h3><p>From cardiac screening for 45,000 children to TB nutrition baskets — specialist healthcare reaching every coalfield village.</p></div><div class="sc-tags"><span class="sc-tag">Nanha Sa Dil</span><span class="sc-tag">Ni-kshay Mitra</span><span class="sc-tag">Project ADITI</span><span class="sc-tag">Mobile Medical Units</span></div><div class="sc-footer"><span>2,37,594 beneficiaries · 673 camps</span><span class="sc-arrow">→</span></div></a>
+      <a href="skill-livelihood.html" class="sector-card reveal" data-sector="skill"><div class="sector-bar"></div><div class="sc-inner"><div class="sc-icon">⚙️</div><h3>Skill &amp; Livelihood</h3><p>Job-linked training that converts potential into sustainable income for tribal artisans, women and PAPs.</p></div><div class="sc-tags"><span class="sc-tag">Tribal Haat</span><span class="sc-tag">CIA Express</span><span class="sc-tag">CIPET · Plastic Engineering</span><span class="sc-tag">E-Rickshaws</span></div><div class="sc-footer"><span>1,200+ youth trained annually</span><span class="sc-arrow">→</span></div></a>
+      <a href="sports.html" class="sector-card reveal" data-sector="sport"><div class="sector-bar"></div><div class="sc-inner"><div class="sc-icon">🏆</div><h3>Sports Promotion</h3><p>From coalfield villages to international podiums — world-class infrastructure, Khelo India accreditation and CBSE schooling for 234 cadets.</p></div><div class="sc-tags"><span class="sc-tag">Sports Academy (JSSPS)</span><span class="sc-tag">Khelo India Accredited</span><span class="sc-tag">11 Disciplines</span></div><div class="sc-footer"><span>1,809 medals · 2× National CSR Award</span><span class="sc-arrow">→</span></div></a>
+      <a href="animal-welfare.html" class="sector-card reveal" data-sector="animal"><div class="sector-bar"></div><div class="sc-inner"><div class="sc-icon">🐾</div><h3>Animal Welfare</h3><p>Rakshak — Jharkhand's first hospital-on-wheels for stray animals. A Gold IHW Award-winning innovation in eco-conscious CSR.</p></div><div class="sc-tags"><span class="sc-tag">Rakshak Animal Ambulance</span><span class="sc-tag">Tree Ambulance</span></div><div class="sc-footer"><span>Gold — IHW CSR Health Impact Awards 2024</span><span class="sc-arrow">→</span></div></a>
+      <a href="just-transition.html" class="sector-card reveal" data-sector="env"><div class="sector-bar"></div><div class="sc-inner"><div class="sc-icon">🌿</div><h3>Just Transition</h3><p>Mine voids into fish farms, villages powered by solar, 817 Ha greened through afforestation and eco-tourism.</p></div><div class="sc-tags"><span class="sc-tag">Caged Fish Farming · 7 voids</span><span class="sc-tag">Afforestation · 817 Ha</span><span class="sc-tag">24 MW Solar</span></div><div class="sc-footer"><span>2.4 Lakh people benefit from mine water</span><span class="sc-arrow">→</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPENDITURE -->
+<section id="expenditure">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:36px">
+      <div class="section-label">CSR Expenditure</div>
+      <h2 class="section-heading">₹683.44 Crore Invested Since 2014</h2>
+      <p class="section-subtext">CCL has exceeded its mandatory 2% statutory CSR target in <strong>6 of the last 11 years</strong> — with FY 2024–25 marking the highest spend ever at ₹81.11 Cr, surpassing the mandatory requirement by ₹18.85 Cr (+30%).</p>
+    </div>
+    <div class="exp-layout">
+      <div class="reveal">
+        <div class="exp-summary-strip">
+          <div class="ess"><span class="ess-val black-val">6 / 11</span><span class="ess-lbl">Years Exceeded Target</span></div>
+          <div class="ess"><span class="ess-val amber-val">+₹18.85 Cr</span><span class="ess-lbl">Surplus · FY 2024–25</span></div>
+          <div class="ess"><span class="ess-val amber-val">+30%</span><span class="ess-lbl">Above Mandatory · 2024–25</span></div>
+          <div class="ess"><span class="ess-val black-val">₹683.44 Cr</span><span class="ess-lbl">Cumulative Total</span></div>
+        </div>
+        <div class="exp-legend">
+          <div class="exp-legend-item"><div class="exp-swatch" style="background:linear-gradient(90deg,#1A5E2A,#2E8B4A)"></div>Actual Spend (within mandatory)</div>
+          <div class="exp-legend-item"><div class="exp-swatch" style="background:linear-gradient(90deg,var(--ccl-yellow-dk),var(--ccl-yellow))"></div>Surplus above mandatory target</div>
+          <div class="exp-legend-item"><div class="exp-swatch" style="background:#9A9A9A"></div>Below target year</div>
+          <div class="exp-legend-item"><div class="exp-swatch" style="border:2px dashed rgba(90,90,90,.4);background:transparent"></div>Mandatory target line (2% Net Profit)</div>
+        </div>
+        <div class="bar-chart" id="barChart"></div>
+        <div class="exp-chart-note"><strong>How to read:</strong> Dark green = actual spend within mandatory target. Gold = surplus above 2% statutory requirement. Dashed border = mandatory target line. &nbsp;✅ exceeded &nbsp;|&nbsp; ⚠️ below target &nbsp;|&nbsp; 🏆 highest ever (FY 2024–25)</div>
+      </div>
+      <div class="exp-panel reveal">
+        <h3>Expenditure Summary</h3>
+        <div class="esr"><span class="esr-lbl">FY 2024–25 Expenditure</span><span class="esr-val big">₹81.11 Cr</span></div>
+        <div class="esr"><span class="esr-lbl">Mandatory Target (2% Net Profit)</span><span class="esr-val">₹62.26 Cr</span></div>
+        <div class="esr"><span class="esr-lbl">Surplus over Mandatory</span><span class="esr-val" style="color:var(--ccl-yellow)">+₹18.85 Cr</span></div>
+        <div class="esr"><span class="esr-lbl">FY 2025–26 (till Dec 2025)</span><span class="esr-val">₹50.03 Cr</span></div>
+        <div class="esr"><span class="esr-lbl">FY 2025–26 Mandatory</span><span class="esr-val">₹74.25 Cr</span></div>
+        <div class="esr"><span class="esr-lbl">Total Projects FY 2024–25</span><span class="esr-val">377</span></div>
+        <div class="esr" style="border-top:1px solid rgba(245,168,0,.18);margin-top:8px;padding-top:14px"><span class="esr-lbl">Cumulative Total (2014–2025)</span><span class="esr-val" style="color:var(--ccl-yellow);font-size:1rem">₹683.44 Cr</span></div>
+        <div class="exp-note"><p>80% spend within 25 km of CCL establishments · Balance within Jharkhand · 60% on DPE-notified themes · Figures per MCA Annual Report</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSR POLICY -->
+<section id="policy">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:32px">
+      <div class="section-label">CSR Policy &amp; Compliance</div>
+      <h2 class="section-heading">Governed by Law, Driven by Purpose</h2>
+      <p class="section-subtext">Statutory disclosures under Companies Act 2013 Section 135 — Board-approved policy, CSR Committee composition, annual action plans, and the legal framework governing CCL's CSR obligations.</p>
+    </div>
+    <div class="policy-compliance-strip reveal">
+      <div class="pcs-pill"><div class="pnum">2%</div><div class="ptext"><strong>Mandatory CSR Spend</strong><span>Avg. net profit of 3 preceding years</span></div><div class="pdot"></div></div>
+      <div class="pcs-pill"><div class="pnum">60%</div><div class="ptext"><strong>DPE Priority Themes</strong><span>Minimum allocation to notified themes</span></div><div class="pdot"></div></div>
+      <div class="pcs-pill"><div class="pnum">80%</div><div class="ptext"><strong>Local Area Spend</strong><span>Within 25 km of CCL establishments</span></div><div class="pdot"></div></div>
+      <div class="pcs-pill"><div class="pnum" style="font-size:1.1rem;padding-top:.2rem">Zero</div><div class="ptext"><strong>CAG Audit Paragraphs</strong><span>Zero findings on CSR — all years</span></div><div class="pdot"></div></div>
+    </div>
+    <div class="policy-layout">
+      <div class="policy-committee reveal">
+        <h3>CSR Committee of CCL Board</h3>
+        <p class="sub">Constituted under Section 135(1) of the Companies Act 2013 · Meets minimum 4 times per year · Approves policy, budget &amp; impact assessments</p>
+        <div class="committee-row"><div class="cr-num">1</div><div class="cr-body"><div class="cr-role">Chairman-cum-Managing Director (CMD)</div><div class="cr-cat">Functional Director · Govt. Nominee</div></div><span class="cr-badge chair">Chairman</span></div>
+        <div class="committee-row"><div class="cr-num">2</div><div class="cr-body"><div class="cr-role">Director (Personnel), CCL</div><div class="cr-cat">Functional Director</div></div><span class="cr-badge mem">Member</span></div>
+        <div class="committee-row"><div class="cr-num">3</div><div class="cr-body"><div class="cr-role">Director (Finance), CCL</div><div class="cr-cat">Functional Director</div></div><span class="cr-badge mem">Member</span></div>
+        <div class="committee-row"><div class="cr-num">4</div><div class="cr-body"><div class="cr-role">Director (Technical / Operations), CCL</div><div class="cr-cat">Functional Director</div></div><span class="cr-badge mem">Member</span></div>
+        <div class="committee-row"><div class="cr-num">5</div><div class="cr-body"><div class="cr-role">Independent Director (Govt. Nominee)</div><div class="cr-cat">Independent Director · CCL Board</div></div><span class="cr-badge ind">Independent</span></div>
+        <div class="committee-row"><div class="cr-num">6</div><div class="cr-body"><div class="cr-role">GM (CSR &amp; Community Development), CCL</div><div class="cr-cat">Senior Management · Non-Director</div></div><span class="cr-badge sec">Secretary</span></div>
+        <div class="committee-footer">📋 Committee composition, meeting minutes, and executive list of all 35 CSR officers available for download below. Names updated post each Board reconstitution.</div>
+        <div style="margin-top:18px">
+          <div style="font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ccl-yellow);margin-bottom:10px">Annual Action Plans</div>
+          <div class="policy-action-row">
+            <a class="par-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><div class="par-icon">📅</div><div class="par-body"><strong>FY 2025–26 Action Plan</strong><span>Board Approved + Modified</span></div><span class="par-arrow">↗</span></a>
+            <a class="par-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><div class="par-icon">📅</div><div class="par-body"><strong>FY 2024–25 Action Plan</strong><span>Board Approved + Modified</span></div><span class="par-arrow">↗</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="policy-docs-panel reveal">
+        <div class="policy-doc-group">
+          <div class="pdg-header"><div class="pdg-icon gold">📜</div><span class="pdg-title">CCL CSR Policy</span><span class="pdg-count">4 docs</span></div>
+          <div class="pdg-list">
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">📄</span><span class="dl-name">CCL Revised CSR Policy (2024)</span><span class="dl-tag new">Latest</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">📋</span><span class="dl-name">Implementation SOP — CSR Activities (26.11.2019)</span><span class="dl-tag gov">SOP</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">📋</span><span class="dl-name">CIL Group CSR Policy — Modified April 2021</span><span class="dl-tag pdf">PDF</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">📋</span><span class="dl-name">CIL Group CSR Policy — Modified October 2020</span><span class="dl-tag pdf">PDF</span></a>
+          </div>
+        </div>
+        <div class="policy-doc-group">
+          <div class="pdg-header"><div class="pdg-icon dark">🏛️</div><span class="pdg-title">Board-Approved Projects &amp; Committee</span><span class="pdg-count">4 docs</span></div>
+          <div class="pdg-list">
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">👥</span><span class="dl-name">CCL SD &amp; CSR Committee — Composition &amp; Minutes</span><span class="dl-tag new">Updated</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">✅</span><span class="dl-name">List of CCL Board-Approved CSR Projects — Till FY 2021</span><span class="dl-tag pdf">PDF</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">✅</span><span class="dl-name">List of CSR Projects Approved in FY 2022–23</span><span class="dl-tag pdf">PDF</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">📊</span><span class="dl-name">Year-wise CSR Expenditure Report — All Years</span><span class="dl-tag gov">Reports</span></a>
+          </div>
+        </div>
+        <div class="policy-doc-group">
+          <div class="pdg-header"><div class="pdg-icon blue">⚖️</div><span class="pdg-title">Companies Act, Rules &amp; FAQs</span><span class="pdg-count">4 docs</span></div>
+          <div class="pdg-list">
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">⚖️</span><span class="dl-name">Section 135 of Companies Act 2013</span><span class="dl-tag gov">Primary Law</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">📑</span><span class="dl-name">Companies (CSR Policy) Rules 2014</span><span class="dl-tag pdf">PDF</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">📑</span><span class="dl-name">Amendment Rules w.e.f. 22.01.2021</span><span class="dl-tag pdf">PDF</span></a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener"><span class="dl-icon">❓</span><span class="dl-name">MCA GC No. 14/2021 — FAQs (25.08.2021)</span><span class="dl-tag pdf">PDF</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="policy-cta reveal">
+      <div class="policy-cta-text">
+        <h3>Complete Policy &amp; Compliance Documentation</h3>
+        <p>The dedicated CSR Policy page contains all meeting minutes, activity-wise expenditure for FY 2022–25, Notifications &amp; Circulars, DPE guidelines, impact assessment reports, and the complete legal framework.</p>
+        <div class="policy-cta-badges">
+          <span class="pc-badge-item"><span class="dot"></span> CSR Committee Minutes</span>
+          <span class="pc-badge-item"><span class="dot"></span> Activity-wise Expenditure FY22–FY25</span>
+          <span class="pc-badge-item"><span class="dot"></span> TERI &amp; IICA Impact Studies</span>
+          <span class="pc-badge-item"><span class="dot"></span> DPE &amp; MCA Circulars</span>
+        </div>
+      </div>
+      <a href="csr-policy.html" class="policy-cta-btn">View Full Compliance Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section id="stories">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Voices from the Field</div>
+      <h2 class="section-heading">The People Behind the Numbers</h2>
+      <p class="section-subtext">Every statistic represents a real person whose life has changed. These are the communities at the heart of CCL's ₹81.11 crore annual investment.</p>
+    </div>
+    <div class="stories-grid">
+      <div class="story-card reveal"><div class="story-photo sp-edu">🎓</div><div class="story-body"><h4>From a Tailor's Son to Amazon Engineer</h4><p>Wards of farmers, labourers, tailors and mechanics — coached by IITian CCL officers — now work at Amazon, Microsoft, SAP Labs and L&amp;T, inspiring the next generation from villages and small towns across Jharkhand.</p><p class="story-loc loc-edu">📍 CCL Ke Lal &amp; Laadli · DAV Gandhinagar, Ranchi</p></div></div>
+      <div class="story-card reveal"><div class="story-photo sp-health">❤️</div><div class="story-body"><h4>82 Children with Second Chances at Life</h4><p>Under Nanha Sa Dil, 30,768 children have been screened for Congenital Heart Disease across 5 districts. 82 have received free cardiac surgery — hospitalization, travel and post-operative care fully covered by CCL.</p><p class="story-loc loc-health">📍 Latehar, Hazaribagh, Ramgarh, Giridih, Palamu</p></div></div>
+      <div class="story-card reveal"><div class="story-photo sp-skill">⚡</div><div class="story-body"><h4>Ten Women Who Became Breadwinners</h4><p>Ten underprivileged tribal women in Ranchi received electric auto-rickshaws, driving licences and technical training. Each now earns ₹15,000 per month — serving patients at RK Mission TB Sanatorium.</p><p class="story-loc loc-skill">📍 RK Mission, Ranchi · E-Rickshaw Initiative</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Flagship Projects</div>
+      <h2 class="section-heading">Highlights from FY 2024–25 &amp; 2025–26</h2>
+      <p class="section-subtext">Six high-impact programmes combining scale, measurability and genuine community transformation.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal" data-sector="edu"><div class="pc-inner"><span class="pc-tag">📚 Education</span><h3>Project Digital Vidya (EdCIL)</h3><p>Smart Classrooms and ICT Labs installed in 193 government schools across 8 districts — computers, smart boards, teacher training and 3-year annual maintenance.</p><div class="pc-meta"><div class="pcm"><span class="pcm-lbl">Project Cost</span><span class="pcm-val">₹26.13 Cr</span></div><div class="pcm"><span class="pcm-lbl">Schools</span><span class="pcm-val">193</span></div><div class="pcm"><span class="pcm-lbl">Districts</span><span class="pcm-val">8</span></div></div><span class="pc-badge">✅ Completed &amp; AMC Ongoing</span></div></div>
+      <div class="project-card reveal" data-sector="health"><div class="pc-inner"><span class="pc-tag">🏥 Health</span><h3>Nanha Sa Dil — CHD Screening &amp; Surgery</h3><p>Screening 45,000 children across 5 districts for Congenital Heart Disease; free cardiac surgery for 500 children covering hospitalization, surgery, travel and post-operative care through Sri Sathya Sai Health Trust.</p><div class="pc-meta"><div class="pcm"><span class="pcm-lbl">Project Cost</span><span class="pcm-val">₹9.54 Cr</span></div><div class="pcm"><span class="pcm-lbl">Screened</span><span class="pcm-val">30,768</span></div><div class="pcm"><span class="pcm-lbl">Surgeries</span><span class="pcm-val">82</span></div></div><span class="pc-badge">🔄 Ongoing · FY 2025–26</span></div></div>
+      <div class="project-card reveal" data-sector="edu"><div class="pc-inner"><span class="pc-tag">📚 Education</span><h3>CCL Ke Lal &amp; CCL Ki Laadli</h3><p>Free JEE Advanced-level coaching with schooling, hostel, meals and medical care — taught by IITian CCL officers. 194 students have secured seats in IITs, NITs and premier engineering colleges since 2012.</p><div class="pc-meta"><div class="pcm"><span class="pcm-lbl">Annual Outlay</span><span class="pcm-val">₹1.5 Cr</span></div><div class="pcm"><span class="pcm-lbl">Enrolled</span><span class="pcm-val">80</span></div><div class="pcm"><span class="pcm-lbl">IIT/NIT Alumni</span><span class="pcm-val">194+</span></div></div><span class="pc-badge">🌟 Since 2012 · Flagship Initiative</span></div></div>
+      <div class="project-card reveal" data-sector="sport"><div class="pc-inner"><span class="pc-tag">🏆 Sports</span><h3>Sports Academy, Hotwar (JSSPS)</h3><p>Multi-sport academy with 234 cadets across 11 disciplines. Khelo India accreditation for 8 academies. CBSE schooling, hostel, CCL doctor, medical insurance and full international tournament participation.</p><div class="pc-meta"><div class="pcm"><span class="pcm-lbl">Annual Outlay</span><span class="pcm-val">₹12–14 Cr</span></div><div class="pcm"><span class="pcm-lbl">Athletes</span><span class="pcm-val">234</span></div><div class="pcm"><span class="pcm-lbl">Medals Won</span><span class="pcm-val">1,809</span></div></div><span class="pc-badge">🏅 2× National CSR Award for Sports</span></div></div>
+      <div class="project-card reveal" data-sector="skill"><div class="pc-inner"><span class="pc-tag" style="background:var(--s-skill-bg);color:var(--s-skill)">⚙️ Skill &amp; Livelihood</span><h3>Centralised Kitchen, Ramgarh (Akshaya Patra)</h3><p>A centralized kitchen on 2 acres allotted by District Administration — delivering mid-day meals to 50,000 students in 538 government schools. Structure 80% complete, commissioning March 2026.</p><div class="pc-meta"><div class="pcm"><span class="pcm-lbl">Project Cost</span><span class="pcm-val">₹22.09 Cr</span></div><div class="pcm"><span class="pcm-lbl">Students</span><span class="pcm-val">50,000</span></div><div class="pcm"><span class="pcm-lbl">Schools</span><span class="pcm-val">538</span></div></div><span class="pc-badge">🔄 80% Structure Complete</span></div></div>
+      <div class="project-card reveal" data-sector="health"><div class="pc-inner"><span class="pc-tag">🏥 Health</span><h3>Ni-kshay Mitra — TB Elimination</h3><p>Nutrition baskets to TB patients in Latehar and Chatra, treatment monitoring and linkage with government health services — earning Diamond Tier status under PM TB Mukt Bharat Abhiyaan.</p><div class="pc-meta"><div class="pcm"><span class="pcm-lbl">Project Cost</span><span class="pcm-val">₹2.93 Cr</span></div><div class="pcm"><span class="pcm-lbl">Patients Covered</span><span class="pcm-val">3,375+</span></div></div><span class="pc-badge">💎 Diamond Tier · Corporate TB Pledge</span></div></div>
+    </div>
+    <div style="text-align:center;margin-top:38px">
+      <a href="projects.html" class="btn-primary" style="background:var(--ccl-black)">View All 377 Projects →</a>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="container">
+    <div class="awards-header reveal">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-heading">Awards &amp; Accolades</h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card reveal"><span class="award-medal">🏛️</span><h4>National CSR Award — Ministry of Corporate Affairs</h4><p>1st and 2nd National CSR Awards for Promotion of Sports (Sports Academy, Ranchi) — two consecutive years.</p><span class="award-year">CONSECUTIVE WINS</span></div>
+      <div class="award-card reveal"><span class="award-medal">🥇</span><h4>ICSI CSR Excellence Award</h4><p>Best Corporate in Large Category — awarded by the Institute of Company Secretaries of India.</p><span class="award-year">2022</span></div>
+      <div class="award-card reveal"><span class="award-medal">🏆</span><h4>IHW CSR Health Impact Awards 2024</h4><p>Gold — Sports Academy (JSSPS) · Gold — Rakshak (Most Innovative CSR Project) · Bronze — Tribal Haat</p><span class="award-year">2024</span></div>
+      <div class="award-card reveal"><span class="award-medal">🎖️</span><h4>Best Corporate — Nikshay Mitra</h4><p>Awarded by Government of Jharkhand. Praised by Central TB Division at DPE's CSR Conclave, New Delhi.</p><span class="award-year">2024</span></div>
+      <div class="award-card reveal"><span class="award-medal">⭐</span><h4>SKOCH Award 2024</h4><p>For "Development of 8 Aspirational Districts of Jharkhand" — recognising holistic development impact at scale.</p><span class="award-year">2024</span></div>
+      <div class="award-card reveal"><span class="award-medal">🥇</span><h4>CSR Times Award 2025 — Gold</h4><p>Livelihood Category for CIA Express — 100% placement of SC/ST beneficiaries at Amazon, Microsoft, SAP Labs.</p><span class="award-year">2025</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICKLINKS -->
+<section id="quicklinks">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:32px">
+      <div class="section-label" style="justify-content:center">Quick Navigation</div>
+      <h2 class="section-heading" style="text-align:center">Explore the CSR Website</h2>
+    </div>
+    <div class="quicklinks-grid">
+      <a href="education.html" class="ql reveal" style="border-bottom-color:var(--s-edu)"><span class="ql-icon">📚</span><h4 style="color:var(--s-edu)">Education</h4><p>CCL Ke Lal, Digital Vidya, State Library.</p><span class="ql-arrow" style="color:var(--s-edu)">→</span></a>
+      <a href="health.html" class="ql reveal" style="border-bottom-color:var(--s-health)"><span class="ql-icon">🏥</span><h4 style="color:var(--s-health)">Health &amp; Nutrition</h4><p>Nanha Sa Dil, Ni-kshay Mitra, Mobile Medical Units.</p><span class="ql-arrow" style="color:var(--s-health)">→</span></a>
+      <a href="skill-livelihood.html" class="ql reveal" style="border-bottom-color:var(--s-skill)"><span class="ql-icon">⚙️</span><h4 style="color:var(--s-skill)">Skill &amp; Livelihood</h4><p>CIPET, Tribal Haat, CIA Express, E-Rickshaws.</p><span class="ql-arrow" style="color:var(--s-skill)">→</span></a>
+      <a href="sports.html" class="ql reveal" style="border-bottom-color:var(--s-sport)"><span class="ql-icon">🏆</span><h4 style="color:var(--s-sport)">Sports Academy</h4><p>JSSPS, Khelo India, 1,809 medals.</p><span class="ql-arrow" style="color:var(--s-sport)">→</span></a>
+      <a href="just-transition.html" class="ql reveal" style="border-bottom-color:var(--s-env)"><span class="ql-icon">🌿</span><h4 style="color:var(--s-env)">Just Transition</h4><p>Fish farming, solar energy, afforestation.</p><span class="ql-arrow" style="color:var(--s-env)">→</span></a>
+      <a href="animal-welfare.html" class="ql reveal" style="border-bottom-color:var(--s-animal)"><span class="ql-icon">🐾</span><h4 style="color:var(--s-animal)">Animal Welfare</h4><p>Rakshak — Jharkhand's first stray animal ambulance.</p><span class="ql-arrow" style="color:var(--s-animal)">→</span></a>
+      <a href="projects.html" class="ql reveal" style="border-bottom-color:var(--ccl-black)"><span class="ql-icon">📋</span><h4>All Projects</h4><p>Browse all 377 projects across 8 districts.</p><span class="ql-arrow">→</span></a>
+      <a href="csr-policy.html" class="ql reveal" style="border-bottom-color:var(--ccl-yellow)"><span class="ql-icon">⚖️</span><h4 style="color:var(--ccl-yellow-dk)">CSR Policy &amp; Compliance</h4><p>Committee, policy docs, action plans, legal framework.</p><span class="ql-arrow" style="color:var(--ccl-yellow-dk)">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CCL FOOTER — Authentic CCL Structure
+     (Systems Dept. will replace this section
+      with their standard PHP include)
+═══════════════════════════════════════════ -->
+<footer class="ccl-footer">
+  <div class="ccl-footer-main">
+
+    <!-- Brand column -->
+    <div class="cf-col cf-brand">
+      <h3>Central Coalfields Limited</h3>
+      <div class="cf-underline"></div>
+      <p>A Mini-Ratna subsidiary of Coal India Limited, CCL operates 38 active mines across 8 Aspirational Districts of Jharkhand — powering India's growth while investing in the communities that make it possible.</p>
+      <div class="cf-csr-box">
+        <p><strong>CSR Division</strong> · ₹683.44 Cr invested since 2014 · 2× National CSR Award winner · Diamond Tier — Nikshay Mitra</p>
+      </div>
+      <p class="cf-brand-cin">CIN: U10101JH1956GOI000581<br/>Darbhanga House, Kutchery Road<br/>Ranchi – 834 029, Jharkhand</p>
+    </div>
+
+    <!-- Quick Links — matches CCL footer style -->
+    <div class="cf-col">
+      <h3>Quick Links</h3>
+      <div class="cf-underline"></div>
+      <ul>
+        <li><a href="https://www.centralcoalfields.in/ind/about.php">About CCL</a></li>
+        <li><a href="https://www.centralcoalfields.in/ind/czone.php">CCL OBS</a></li>
+        <li><a href="#expenditure">CSR Expenditure</a></li>
+        <li><a href="projects.html">All 377 Projects</a></li>
+        <li><a href="csr-policy.html">CSR Policy</a></li>
+        <li><a href="contact.html">Contact CSR Division</a></li>
+        <li><a href="https://www.centralcoalfields.in">Main Website ↗</a></li>
+      </ul>
+    </div>
+
+    <!-- CSR Sectors -->
+    <div class="cf-col">
+      <h3>CSR Sectors</h3>
+      <div class="cf-underline"></div>
+      <ul>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="health.html">Health &amp; Nutrition</a></li>
+        <li><a href="skill-livelihood.html">Skill &amp; Livelihood</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="animal-welfare.html">Animal Welfare</a></li>
+        <li><a href="just-transition.html">Just Transition</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us — matches CCL footer style -->
+    <div class="cf-col">
+      <h3>Contact Us</h3>
+      <div class="cf-underline"></div>
+      <div class="cf-contact-item">
+        <div class="cf-contact-icon">📍</div>
+        <div class="cf-contact-text">
+          <strong>Address</strong>
+          Central Coalfields Limited<br/>Darbhanga House, Kutchery Road<br/>Ranchi-834029, Jharkhand
+        </div>
+      </div>
+      <div class="cf-contact-item">
+        <div class="cf-contact-icon">📞</div>
+        <div class="cf-contact-text">
+          <strong>Toll Free (Samadhan Cell)</strong>
+          18003456501<br/>
+          <strong>WhatsApp:</strong> 7250141999
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CCL Yellow bottom strip — exact match from screenshot -->
+  <div class="ccl-footer-strip">
+    <p>Designed &amp; Developed by Systems Dept. CCL Ranchi &nbsp;|&nbsp; Updated on 24-02-2026</p>
+    <div class="strip-links">
+      <a href="https://www.centralcoalfields.in/ind/websitepolicies.php">Website Policies</a>
+      <a href="https://www.centralcoalfields.in/ind/it_policy.php">IT Policy (525 KB)(Pdf)</a>
+      <a href="https://www.centralcoalfields.in/ind/wim.php">Website Information Manager</a>
+      <span class="visitor-box">7664862</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ─── Expenditure Bar Chart ─── */
+const expData=[
+  {year:'2014–15',mandatory:47.86,actual:47.88},
+  {year:'2015–16',mandatory:53.00,actual:212.79},
+  {year:'2016–17',mandatory:55.90,actual:30.29},
+  {year:'2017–18',mandatory:54.88,actual:37.90},
+  {year:'2018–19',mandatory:45.57,actual:41.14},
+  {year:'2019–20',mandatory:42.73,actual:52.89},
+  {year:'2020–21',mandatory:46.46,actual:56.60},
+  {year:'2021–22',mandatory:40.11,actual:53.14},
+  {year:'2022–23',mandatory:46.28,actual:36.12},
+  {year:'2023–24',mandatory:51.68,actual:61.91},
+  {year:'2024–25',mandatory:62.26,actual:81.11}
+];
+const SCALE=220;
+const chart=document.getElementById('barChart');
+
+expData.forEach((d,i)=>{
+  const exceeded=d.actual>=d.mandatory;
+  const isLatest=i===expData.length-1;
+  const surplus=Math.max(0,d.actual-d.mandatory);
+  const hasSurplus=surplus>0;
+  const diff=exceeded?`▲ +₹${surplus.toFixed(2)} Cr`:`▼ −₹${(d.mandatory-d.actual).toFixed(2)} Cr`;
+  const badge=isLatest?'🏆':(exceeded?'✅':'⚠️');
+  const rowCls=isLatest?'latest':(exceeded?'exceeded':'below-target');
+  const mPct=(d.mandatory/SCALE*100).toFixed(2);
+  const basePct=(Math.min(d.actual,d.mandatory)/SCALE*100).toFixed(2);
+  const surplusPct=hasSurplus?((d.actual-d.mandatory)/SCALE*100).toFixed(2):0;
+  const surplusLeft=(d.mandatory/SCALE*100).toFixed(2);
+  const baseStyle=exceeded?'bar-base':'bar-base below-style';
+  const fullRadius=!hasSurplus?'full-radius':'';
+  const showLabel=d.actual>35;
+  chart.insertAdjacentHTML('beforeend',`
+    <div class="bar-row ${rowCls}">
+      <span class="bar-year">${d.year}</span>
+      <div class="bar-track">
+        <div class="bar-mandatory" style="width:${mPct}%"></div>
+        <div class="${baseStyle} ${fullRadius}" style="width:0%" data-w="${basePct}%">${showLabel?'₹'+d.actual+' Cr':''}</div>
+        ${hasSurplus?`<div class="bar-surplus" style="left:${surplusLeft}%;width:0%" data-w="${surplusPct}%" data-l="${surplusLeft}%"></div>`:''}
+      </div>
+      <span class="bar-badge">${badge}</span>
+      <div class="bar-amt-col">
+        <span class="bar-actual">₹${d.actual} Cr</span>
+        <span class="bar-diff ${exceeded?'surplus-lbl':'below-lbl'}">${diff}</span>
+      </div>
+    </div>`);
+});
+
+/* ─── Animate bars on scroll ─── */
+const barObs=new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting){
+    document.querySelectorAll('.bar-base,.bar-surplus').forEach((el,i)=>{
+      setTimeout(()=>{
+        if(el.dataset.w) el.style.width=el.dataset.w;
+        if(el.dataset.l) el.style.left=el.dataset.l;
+      },i*65);
+    });
+    barObs.disconnect();
+  }
+},{threshold:.1});
+barObs.observe(document.getElementById('expenditure'));
+
+/* ─── Scroll reveal ─── */
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('visible'),i*50);
+      ro.unobserve(e.target);
+    }
+  });
+},{threshold:.07});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* ─── Count-up numbers ─── */
+function cnt(el){
+  const target=parseInt(el.dataset.target,10);
+  const dur=1800; const start=performance.now();
+  (function step(now){
+    const t=Math.min((now-start)/dur,1);
+    el.textContent=Math.floor((1-Math.pow(1-t,3))*target).toLocaleString('en-IN');
+    if(t<1)requestAnimationFrame(step);
+  })(start);
+}
+const co=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){cnt(e.target);co.unobserve(e.target);}});
+},{threshold:.5});
+document.querySelectorAll('.count-up').forEach(el=>co.observe(el));
+
+/* ─── Active nav link on scroll ─── */
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.csr-nav-links a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    if(window.scrollY>=s.offsetTop-120) current=s.id;
+  });
+  navLinks.forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('href')==='#'+current);
+  });
+},{passive:true});
+</script>
+</body>
+</html>
