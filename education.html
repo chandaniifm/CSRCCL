@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="CCL CSR Education Programmes — CCL Ke Lal & Laadli, Project Digital Vidya, State Library Ranchi. Transforming education across Jharkhand's coalfields."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Open+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ══════════════════════════════════════════════
+       CCL DESIGN SYSTEM
+       ══════════════════════════════════════════════ */
+    :root {
+      --ccl-black:      #111111;
+      --ccl-dark:       #1A1A1A;
+      --ccl-yellow:     #F5A800;
+      --ccl-yellow-dk:  #D48F00;
+      --ccl-yellow-lt:  #FFF8E7;
+      --ccl-yellow-xlt: #FFFCF0;
+      --ccl-white:      #FFFFFF;
+      --ccl-off-white:  #F8F8F8;
+      --ccl-light-bg:   #F4F4F4;
+      --ccl-mid-grey:   #666666;
+      --ccl-border:     #E0E0E0;
+      --ccl-text:       #1A1A1A;
+      --ccl-text-soft:  #444444;
+      /* Education sector accent — muted within CCL framework */
+      --edu-accent:     #1D4ED8;
+      --edu-pale:       #EFF6FF;
+      --edu-tint:       #DBEAFE;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--ccl-text); background: var(--ccl-off-white); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ══════════════════════════════════════════════
+       CCL HEADER — Utility Bar
+       ══════════════════════════════════════════════ */
+    .ccl-utility-bar { background: var(--ccl-black); padding: 5px 0; border-bottom: 1px solid #2a2a2a; }
+    .ccl-utility-inner { max-width: 1280px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+    .ccl-social-icons { display: flex; align-items: center; gap: 5px; }
+    .ccl-social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 3px; background: #2a2a2a; color: #ccc; font-size: 11px; transition: background .2s, color .2s; }
+    .ccl-social-icons a:hover { background: var(--ccl-yellow); color: var(--ccl-black); }
+    .ccl-utility-right { display: flex; align-items: center; gap: 16px; }
+    .ccl-utility-right a { color: #ccc; font-size: 11px; font-weight: 500; letter-spacing: .5px; transition: color .2s; }
+    .ccl-utility-right a:hover { color: var(--ccl-yellow); }
+    .ccl-lang-toggle { background: #2a2a2a; padding: 2px 8px; border-radius: 2px; border: 1px solid #444; }
+
+    /* CCL HEADER — Main Nav */
+    .ccl-main-nav { background: var(--ccl-yellow); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+    .ccl-main-nav-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: stretch; min-height: 62px; }
+    .ccl-logo-panel { background: var(--ccl-dark); display: flex; align-items: center; gap: 12px; padding: 8px 36px 8px 20px; flex-shrink: 0; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 100%, 0 100%); }
+    .ccl-emblem { width: 46px; height: 46px; border-radius: 50%; background: var(--ccl-white); display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px solid var(--ccl-yellow); flex-shrink: 0; }
+    .ccl-emblem-text { font-size: 13px; font-weight: 800; color: #1A6B2A; letter-spacing: 1px; line-height: 1; }
+    .ccl-emblem-sub  { font-size: 6px; font-weight: 600; color: #444; letter-spacing: .5px; text-transform: uppercase; margin-top: 1px; }
+    .ccl-logo-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--ccl-white); letter-spacing: .3px; line-height: 1.2; display: block; }
+    .ccl-logo-tagline { font-size: 9px; font-weight: 500; color: #bbb; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; display: block; }
+    .ccl-nav-links { display: flex; align-items: center; list-style: none; padding: 0 8px; flex: 1; }
+    .ccl-nav-links > li { height: 100%; display: flex; align-items: center; }
+    .ccl-nav-links > li > a { display: flex; align-items: center; height: 100%; padding: 0 13px; font-size: 11.5px; font-weight: 700; color: var(--ccl-dark); letter-spacing: .5px; text-transform: uppercase; transition: background .2s; white-space: nowrap; border-bottom: 3px solid transparent; }
+    .ccl-nav-links > li > a:hover { background: rgba(0,0,0,.1); border-bottom-color: var(--ccl-dark); }
+    .ccl-nav-links > li > a.active { background: var(--ccl-dark); color: var(--ccl-yellow); border-bottom-color: var(--ccl-yellow); }
+
+    /* CCL HEADER — CSR Sub-Nav Strip */
+    .ccl-csr-subnav { background: var(--ccl-dark); border-bottom: 3px solid var(--ccl-yellow); position: sticky; top: 62px; z-index: 999; }
+    .ccl-csr-subnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 0 0 20px; display: flex; align-items: stretch; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .csr-subnav-label { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--ccl-yellow); padding: 0 20px 0 0; display: flex; align-items: center; white-space: nowrap; border-right: 1px solid rgba(255,255,255,.1); flex-shrink: 0; }
+    .csr-subnav-link { padding: 10px 16px; font-size: 11.5px; font-weight: 600; color: rgba(255,255,255,.55); white-space: nowrap; display: flex; align-items: center; gap: 6px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+    .csr-subnav-link:hover { color: rgba(255,255,255,.85); border-bottom-color: rgba(245,168,0,.5); }
+    .csr-subnav-link.active { color: var(--ccl-yellow); border-bottom-color: var(--ccl-yellow); }
+
+    /* Breadcrumb */
+    .ccl-breadcrumb { background: var(--ccl-light-bg); border-bottom: 1px solid var(--ccl-border); padding: 8px 20px; display: flex; align-items: center; gap: 6px; }
+    .ccl-breadcrumb a { font-size: 11.5px; color: var(--ccl-mid-grey); transition: color .2s; }
+    .ccl-breadcrumb a:hover { color: var(--ccl-yellow-dk); }
+    .ccl-breadcrumb-sep { font-size: 11px; color: #bbb; }
+    .ccl-breadcrumb-current { font-size: 11.5px; font-weight: 600; color: var(--ccl-dark); display: flex; align-items: center; gap: 5px; }
+
+    /* ══════════════════════════════════════════════
+       HERO — CCL palette, full-width
+       ══════════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 55%, #1E1B0A 100%);
+      position: relative; overflow: hidden;
+      padding: 60px 0 56px;
+      min-height: 400px; display: flex; align-items: center;
+    }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 700px 400px at 75% 50%, rgba(245,168,0,.07) 0%, transparent 70%); pointer-events: none; }
+    .hero::after  { content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 40%; background: repeating-linear-gradient(-55deg, transparent, transparent 40px, rgba(245,168,0,.025) 40px, rgba(245,168,0,.025) 41px); pointer-events: none; }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center; position: relative; z-index: 1; }
+
+    .hero-sector-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,168,0,.12); border: 1px solid rgba(245,168,0,.3); border-radius: 2px; padding: 5px 14px; margin-bottom: 20px; font-size: 10px; font-weight: 700; color: var(--ccl-yellow); letter-spacing: 2.5px; text-transform: uppercase; }
+    .hero-sector-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--ccl-yellow); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(245,168,0,.6); } 50% { box-shadow: 0 0 0 7px rgba(245,168,0,0); } }
+
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 4vw, 3.6rem); line-height: 1.1; font-weight: 900; color: var(--ccl-white); margin-bottom: 18px; }
+    .hero h1 em { font-style: italic; color: var(--ccl-yellow); }
+    .hero-intro { font-size: 14.5px; line-height: 1.8; color: rgba(255,255,255,.6); max-width: 520px; margin-bottom: 28px; }
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--ccl-yellow); color: var(--ccl-dark); font-size: 12.5px; font-weight: 700; padding: 11px 22px; border-radius: 3px; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, transform .2s; }
+    .btn-primary:hover { background: var(--ccl-yellow-dk); transform: translateY(-1px); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: rgba(255,255,255,.75); font-size: 12.5px; font-weight: 600; padding: 11px 22px; border-radius: 3px; border: 1.5px solid rgba(255,255,255,.2); transition: all .2s; }
+    .btn-ghost:hover { border-color: rgba(245,168,0,.5); color: var(--ccl-yellow); }
+
+    /* Hero stat card */
+    .hero-panel { background: rgba(255,255,255,.05); border: 1px solid rgba(245,168,0,.2); border-radius: 4px; padding: 26px; }
+    .hp-label { font-size: 9.5px; font-weight: 700; color: var(--ccl-yellow); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid rgba(245,168,0,.2); }
+    .hp-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); border-radius: 3px; margin-bottom: 8px; }
+    .hp-row:last-child { margin-bottom: 0; }
+    .hp-val { font-family: 'DM Mono', monospace; font-size: 1.45rem; font-weight: 500; color: var(--ccl-yellow); line-height: 1; }
+    .hp-lbl { font-size: 11.5px; color: rgba(255,255,255,.45); text-align: right; max-width: 150px; line-height: 1.4; }
+
+    /* ══════════════════════════════════════════════
+       SECTOR PROG NAV — thin strip
+       ══════════════════════════════════════════════ */
+    .prog-nav { background: var(--ccl-white); border-bottom: 1px solid var(--ccl-border); padding: 0; display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .prog-pill { padding: 14px 22px; font-size: 12.5px; font-weight: 600; color: var(--ccl-mid-grey); white-space: nowrap; border-bottom: 3px solid transparent; transition: all .2s; display: flex; align-items: center; gap: 6px; }
+    .prog-pill:hover { color: var(--ccl-dark); border-bottom-color: var(--ccl-yellow); }
+    .prog-pill.active { color: var(--ccl-dark); border-bottom-color: var(--ccl-yellow); font-weight: 700; }
+
+    /* ══════════════════════════════════════════════
+       PAGE LAYOUT — Sidebar + Main
+       ══════════════════════════════════════════════ */
+    .page-layout { display: grid; grid-template-columns: 240px 1fr; align-items: start; max-width: 1280px; margin: 0 auto; }
+
+    /* SIDEBAR */
+    .sidebar { background: var(--ccl-white); border-right: 1px solid var(--ccl-border); position: sticky; top: 124px; /* 62px nav + 37px subnav + 25px prog */ height: calc(100vh - 124px); overflow-y: auto; }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--ccl-border); border-radius: 2px; }
+    .sidebar-section { padding: 18px 0 4px; border-bottom: 1px solid var(--ccl-border); }
+    .sidebar-section:last-child { border: none; }
+    .sidebar-section-label { font-size: 9px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--ccl-yellow); padding: 0 18px 10px; display: flex; align-items: center; gap: 6px; }
+    .sidebar-section-label::before { content: ''; width: 20px; height: 2px; background: var(--ccl-yellow); }
+    .sidebar-link { display: flex; align-items: center; gap: 10px; padding: 9px 18px; font-size: 12.5px; color: var(--ccl-text-soft); font-weight: 500; border-left: 3px solid transparent; transition: all .18s; cursor: pointer; }
+    .sidebar-link:hover { background: var(--ccl-yellow-xlt); color: var(--ccl-dark); border-left-color: var(--ccl-yellow); }
+    .sidebar-link.active { background: var(--ccl-yellow-lt); color: var(--ccl-dark); font-weight: 700; border-left-color: var(--ccl-yellow); }
+    .sidebar-link .sl-icon { font-size: 14px; flex-shrink: 0; width: 20px; text-align: center; }
+    .sidebar-link .sl-badge { margin-left: auto; background: var(--ccl-yellow); color: var(--ccl-dark); font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 2px; font-family: 'DM Mono', monospace; }
+    .sidebar-back { display: flex; align-items: center; gap: 8px; padding: 12px 18px; font-size: 11.5px; font-weight: 700; color: var(--ccl-mid-grey); letter-spacing: .5px; text-transform: uppercase; border-bottom: 1px solid var(--ccl-border); margin-bottom: 4px; transition: color .2s; }
+    .sidebar-back:hover { color: var(--ccl-yellow-dk); }
+
+    /* MAIN CONTENT AREA */
+    .main-content { min-width: 0; background: var(--ccl-off-white); }
+
+    /* ══════════════════════════════════════════════
+       SECTION STYLES
+       ══════════════════════════════════════════════ */
+    .content-section { padding: 56px 48px; border-bottom: 1px solid var(--ccl-border); }
+    .content-section:last-child { border: none; }
+    .content-section.alt { background: var(--ccl-white); }
+    .content-section.dark { background: var(--ccl-dark); }
+
+    .section-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .section-eyebrow-line { width: 32px; height: 3px; background: var(--ccl-yellow); }
+    .section-eyebrow-text { font-size: 10px; font-weight: 700; color: var(--ccl-yellow); letter-spacing: 3px; text-transform: uppercase; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 700; color: var(--ccl-dark); line-height: 1.2; margin-bottom: 12px; }
+    .section-title.light { color: var(--ccl-white); }
+    .section-desc { font-size: 14px; line-height: 1.8; color: var(--ccl-text-soft); max-width: 680px; }
+    .section-desc.light { color: rgba(255,255,255,.6); }
+
+    /* Status badges */
+    .status-badge { display: inline-flex; align-items: center; gap: 8px; border-radius: 2px; padding: 5px 12px; font-size: 12px; font-weight: 700; margin-bottom: 18px; }
+    .status-ongoing { background: #FEF9C3; color: #854D0E; border: 1px solid #FDE68A; }
+    .status-complete { background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
+    .status-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: pulseDot 2s infinite; }
+    @keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+    /* ─── Programme 1: Ke Lal & Laadli ─── */
+    .lal-layout { display: grid; grid-template-columns: 1fr 280px; gap: 40px; align-items: start; margin-top: 36px; }
+
+    .lal-quote { background: var(--ccl-dark); border-left: 4px solid var(--ccl-yellow); padding: 28px 28px 24px; position: relative; margin-bottom: 28px; }
+    .lal-quote::before { content: '"'; position: absolute; top: -8px; left: 20px; font-family: 'Playfair Display', serif; font-size: 80px; color: rgba(245,168,0,.15); line-height: 1; pointer-events: none; }
+    .lal-quote p { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: rgba(255,255,255,.8); line-height: 1.7; position: relative; z-index: 1; }
+    .lal-quote-attr { font-size: 11px; color: rgba(255,255,255,.35); margin-top: 10px; position: relative; z-index: 1; }
+
+    .benefits-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--ccl-border); }
+    .benefit-item { display: flex; gap: 14px; padding: 14px 18px; border-bottom: 1px solid var(--ccl-border); transition: background .18s; }
+    .benefit-item:last-child { border: none; }
+    .benefit-item:hover { background: var(--ccl-yellow-xlt); }
+    .benefit-num { width: 28px; height: 28px; border-radius: 2px; background: var(--ccl-yellow); color: var(--ccl-dark); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 2px; font-family: 'DM Mono', monospace; }
+    .benefit-body h4 { font-size: 13.5px; font-weight: 700; color: var(--ccl-dark); margin-bottom: 3px; }
+    .benefit-body p { font-size: 12.5px; color: var(--ccl-text-soft); line-height: 1.6; }
+
+    /* Stat tower */
+    .stat-tower { display: flex; flex-direction: column; gap: 12px; position: sticky; top: 164px; }
+    .stat-card { padding: 22px; border-radius: 2px; }
+    .stat-card.primary { background: var(--ccl-yellow); }
+    .stat-card.dark { background: var(--ccl-dark); color: var(--ccl-white); }
+    .stat-card.outlined { background: var(--ccl-white); border: 1px solid var(--ccl-border); }
+    .sc-val { font-family: 'DM Mono', monospace; font-size: 2rem; font-weight: 500; line-height: 1; margin-bottom: 5px; }
+    .stat-card.primary .sc-val { color: var(--ccl-dark); }
+    .stat-card.dark    .sc-val { color: var(--ccl-yellow); }
+    .stat-card.outlined .sc-val { color: var(--ccl-dark); }
+    .sc-lbl { font-size: 12px; line-height: 1.5; }
+    .stat-card.primary .sc-lbl { color: rgba(26,26,26,.7); }
+    .stat-card.dark    .sc-lbl { color: rgba(255,255,255,.55); }
+    .stat-card.outlined .sc-lbl { color: var(--ccl-text-soft); }
+
+    /* Process flow */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 28px; background: var(--ccl-border); border: 1px solid var(--ccl-border); }
+    .process-step { background: var(--ccl-white); padding: 22px 16px; text-align: center; transition: background .2s; }
+    .process-step:hover { background: var(--ccl-yellow-xlt); }
+    .ps-circle { width: 48px; height: 48px; border-radius: 50%; background: var(--ccl-yellow); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 20px; }
+    .ps-title { font-size: 13px; font-weight: 700; color: var(--ccl-dark); margin-bottom: 4px; }
+    .ps-desc { font-size: 11.5px; color: var(--ccl-mid-grey); line-height: 1.5; }
+
+    /* Alumni grid */
+    .alumni-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--ccl-border); border: 1px solid var(--ccl-border); margin-top: 20px; }
+    .alumni-card { background: var(--ccl-white); padding: 22px 18px; text-align: center; transition: background .2s; }
+    .alumni-card:hover { background: var(--ccl-yellow-xlt); }
+    .alumni-college { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ccl-yellow-dk); margin-bottom: 6px; }
+    .alumni-count { font-family: 'DM Mono', monospace; font-size: 2.2rem; font-weight: 500; color: var(--ccl-dark); line-height: 1; }
+    .alumni-label { font-size: 11px; color: var(--ccl-mid-grey); margin-top: 3px; }
+
+    .employers-strip { background: var(--ccl-dark); padding: 14px 20px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 2px; border: 1px solid var(--ccl-border); }
+    .es-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--ccl-yellow); flex-shrink: 0; }
+    .es-tag { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); padding: 4px 14px; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,.7); border-radius: 2px; }
+
+    /* ─── Programme 2: Digital Vidya ─── */
+    .dv-header-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; margin-top: 36px; margin-bottom: 40px; }
+    .dv-kpi-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .dv-kpi { background: var(--ccl-yellow-lt); border: 1px solid #e8d590; padding: 14px 18px; flex: 1; min-width: 110px; }
+    .dv-kpi-val { font-family: 'DM Mono', monospace; font-size: 1.3rem; font-weight: 500; color: var(--ccl-dark); line-height: 1; }
+    .dv-kpi-lbl { font-size: 11px; color: var(--ccl-text-soft); margin-top: 3px; }
+    .dv-image-box { background: var(--ccl-dark); aspect-ratio: 16/9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: 1px solid rgba(245,168,0,.2); position: relative; overflow: hidden; }
+    .dv-image-box::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(-55deg, transparent, transparent 30px, rgba(245,168,0,.03) 30px, rgba(245,168,0,.03) 31px); }
+    .dv-image-box .dv-icon { font-size: 64px; position: relative; z-index: 1; }
+    .dv-image-box .dv-caption { font-size: 12px; font-weight: 500; color: rgba(255,255,255,.5); position: relative; z-index: 1; }
+
+    .lab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--ccl-border); border: 1px solid var(--ccl-border); margin-top: 28px; }
+    .lab-item { background: var(--ccl-white); padding: 22px; display: flex; gap: 14px; align-items: flex-start; transition: background .18s; }
+    .lab-item:hover { background: var(--ccl-yellow-xlt); }
+    .lab-icon { width: 40px; height: 40px; background: var(--ccl-yellow); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; border-radius: 2px; }
+    .lab-body h4 { font-size: 13px; font-weight: 700; color: var(--ccl-dark); margin-bottom: 4px; }
+    .lab-body p { font-size: 12px; color: var(--ccl-text-soft); line-height: 1.55; }
+
+    .districts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--ccl-border); border: 1px solid var(--ccl-border); margin-top: 28px; }
+    .dc-card { background: var(--ccl-white); padding: 18px; text-align: center; transition: background .18s; position: relative; padding-top: 22px; overflow: hidden; }
+    .dc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--ccl-yellow); }
+    .dc-card:hover { background: var(--ccl-yellow-xlt); }
+    .dc-name { font-size: 13.5px; font-weight: 700; color: var(--ccl-dark); margin-bottom: 4px; }
+    .dc-check { font-size: 18px; color: var(--ccl-yellow-dk); }
+    .dc-lbl { font-size: 10.5px; color: var(--ccl-mid-grey); margin-top: 2px; }
+
+    .dv-impact-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--ccl-dark); border: 1px solid var(--ccl-border); margin-top: 32px; }
+    .dib { padding: 28px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,.07); }
+    .dib:last-child { border: none; }
+    .dib-val { font-family: 'DM Mono', monospace; font-size: 2rem; font-weight: 500; color: var(--ccl-yellow); margin-bottom: 6px; }
+    .dib-lbl { font-size: 11.5px; color: rgba(255,255,255,.4); line-height: 1.45; }
+
+    /* ─── Programme 3: State Library ─── */
+    .lib-layout { display: grid; grid-template-columns: 1fr 260px; gap: 40px; align-items: start; margin-top: 36px; }
+
+    .lib-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--ccl-border); border: 1px solid var(--ccl-border); margin-top: 24px; }
+    .lib-spec { background: var(--ccl-white); padding: 18px; transition: background .18s; }
+    .lib-spec:hover { background: var(--ccl-yellow-xlt); }
+    .lib-spec-icon { font-size: 18px; margin-bottom: 8px; }
+    .lib-spec h4 { font-size: 13px; font-weight: 700; color: var(--ccl-dark); margin-bottom: 4px; }
+    .lib-spec p { font-size: 12px; color: var(--ccl-text-soft); line-height: 1.55; }
+
+    .lib-highlights { display: flex; flex-direction: column; gap: 12px; position: sticky; top: 164px; }
+    .lib-hero-card { background: var(--ccl-yellow); padding: 28px; text-align: center; }
+    .lib-hero-val { font-family: 'DM Mono', monospace; font-size: 2.4rem; font-weight: 500; color: var(--ccl-dark); line-height: 1; margin-bottom: 6px; }
+    .lib-hero-lbl { font-size: 12px; color: rgba(26,26,26,.65); line-height: 1.5; }
+    .lib-highlight { background: var(--ccl-dark); padding: 18px; display: flex; gap: 12px; align-items: flex-start; }
+    .lh-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .lh-body h4 { font-size: 13px; font-weight: 700; color: rgba(255,255,255,.85); margin-bottom: 4px; }
+    .lh-body p { font-size: 12px; color: rgba(255,255,255,.45); line-height: 1.55; }
+
+    /* ─── Also Funded ─── */
+    .also-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--ccl-border); border: 1px solid var(--ccl-border); margin-top: 32px; }
+    .also-card { background: var(--ccl-white); padding: 28px; transition: background .2s; }
+    .also-card:hover { background: var(--ccl-yellow-xlt); }
+    .also-icon { font-size: 28px; margin-bottom: 12px; }
+    .also-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--ccl-dark); margin-bottom: 8px; }
+    .also-card p { font-size: 12.5px; color: var(--ccl-text-soft); line-height: 1.65; }
+    .also-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--ccl-yellow); color: var(--ccl-dark); padding: 4px 10px; font-size: 10.5px; font-weight: 700; margin-top: 12px; }
+
+    /* ─── Section nav footer ─── */
+    .section-nav { background: var(--ccl-dark); border-top: 3px solid var(--ccl-yellow); padding: 32px 48px; }
+    .snav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    .snav-link { text-decoration: none; display: flex; align-items: center; gap: 12px; padding: 14px 20px; border: 1px solid rgba(255,255,255,.1); transition: all .25s; }
+    .snav-link:hover { background: rgba(255,255,255,.04); border-color: rgba(245,168,0,.3); }
+    .snav-dir { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 4px; }
+    .snav-title { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.75); }
+    .snav-current { text-align: center; font-size: 15px; font-weight: 700; color: var(--ccl-yellow); }
+
+    /* ══════════════════════════════════════════════
+       CCL FOOTER
+       ══════════════════════════════════════════════ */
+    .ccl-footer { background: var(--ccl-dark); }
+    .ccl-footer-main { padding: 50px 0 40px; }
+    .ccl-footer-grid { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 40px; }
+    .footer-section-title { font-size: 13px; font-weight: 700; color: var(--ccl-white); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; padding-bottom: 10px; position: relative; }
+    .footer-section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: var(--ccl-yellow); }
+    .footer-brand-desc { font-size: 12.5px; color: #888; line-height: 1.75; margin-top: 14px; margin-bottom: 18px; }
+    .footer-edu-tag { background: rgba(245,168,0,.08); border: 1px solid rgba(245,168,0,.2); padding: 12px 16px; }
+    .footer-edu-tag-label { font-size: 9px; font-weight: 700; color: var(--ccl-yellow); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+    .footer-edu-tag-text { font-size: 12.5px; color: #888; line-height: 1.5; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+    .footer-links li a { font-size: 12.5px; color: #888; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+    .footer-links li a::before { content: '›'; color: var(--ccl-yellow); font-size: 15px; line-height: 1; }
+    .footer-links li a:hover { color: var(--ccl-yellow); }
+    .footer-contact-items { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+    .footer-contact-item { display: flex; gap: 12px; align-items: flex-start; }
+    .footer-contact-icon { width: 28px; height: 28px; background: rgba(245,168,0,.1); border: 1px solid rgba(245,168,0,.2); display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+    .footer-contact-text { font-size: 12px; color: #888; line-height: 1.6; }
+    .footer-contact-text strong { display: block; color: #bbb; font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; margin-bottom: 1px; }
+
+    .ccl-footer-strip { background: var(--ccl-yellow); padding: 9px 0; border-top: 2px solid var(--ccl-yellow-dk); }
+    .ccl-footer-strip-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .ccl-footer-strip-left { font-size: 11px; color: var(--ccl-dark); font-weight: 600; }
+    .ccl-footer-strip-right { display: flex; align-items: center; gap: 16px; }
+    .ccl-footer-strip-right a { font-size: 11px; color: var(--ccl-dark); font-weight: 600; }
+    .ccl-footer-strip-right a:hover { text-decoration: underline; }
+    .footer-strip-sep { width: 1px; height: 12px; background: rgba(0,0,0,.2); }
+    .visitor-box { background: rgba(0,0,0,.12); border: 1px solid rgba(0,0,0,.15); padding: 3px 10px; font-size: 11px; font-weight: 700; color: var(--ccl-dark); font-family: 'DM Mono', monospace; }
+
+    /* ══════════════════════════════════════════════
+       SCROLL REVEAL
+       ══════════════════════════════════════════════ */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ══════════════════════════════════════════════
+       RESPONSIVE
+       ══════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .page-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--ccl-border); display: flex; flex-wrap: wrap; gap: 0; }
+      .sidebar-section { border: none; border-right: 1px solid var(--ccl-border); flex: 1; min-width: 200px; padding: 14px 0; }
+      .sidebar-back { width: 100%; }
+      .lal-layout, .dv-header-grid, .lib-layout { grid-template-columns: 1fr; }
+      .stat-tower, .lib-highlights { position: static; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-panel { display: none; }
+      .alumni-grid, .districts-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .dv-impact-bar { grid-template-columns: repeat(2, 1fr); }
+      .also-grid { grid-template-columns: 1fr 1fr; }
+      .ccl-footer-grid { grid-template-columns: 1fr 1fr; }
+      .content-section { padding: 44px 28px; }
+      .section-nav { padding: 28px; }
+    }
+    @media (max-width: 640px) {
+      .ccl-nav-links { display: none; }
+      .hero-inner, .content-section, .section-nav { padding-left: 20px; padding-right: 20px; }
+      .alumni-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid, .lab-grid { grid-template-columns: 1fr; }
+      .districts-grid { grid-template-columns: repeat(2, 1fr); }
+      .also-grid { grid-template-columns: 1fr; }
+      .dv-impact-bar { grid-template-columns: 1fr 1fr; }
+      .lib-specs { grid-template-columns: 1fr; }
+      .snav { flex-direction: column; }
+      .ccl-footer-grid { grid-template-columns: 1fr; }
+      .ccl-footer-strip-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     CCL HEADER — Systems Dept. will replace with PHP include
+     ══════════════════════════════════════════════ -->
+<header>
+  <div class="ccl-utility-bar">
+    <div class="ccl-utility-inner">
+      <div class="ccl-social-icons">
+        <a href="https://www.centralcoalfields.in" title="Home">⌂</a>
+        <a href="#" title="Screen Reader">⊕</a>
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="Twitter">𝕏</a>
+        <a href="#" title="Instagram">◎</a>
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="YouTube">▶</a>
+      </div>
+      <div class="ccl-utility-right">
+        <a href="#" class="ccl-lang-toggle">हिन्दी</a>
+        <a href="#">Help</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+  <nav class="ccl-main-nav">
+    <div class="ccl-main-nav-inner">
+      <div class="ccl-logo-panel">
+        <div class="ccl-emblem">
+          <span class="ccl-emblem-text">CCL</span>
+          <span class="ccl-emblem-sub">Coal India</span>
+        </div>
+        <div>
+          <span class="ccl-logo-name">Central Coalfields Limited</span>
+          <span class="ccl-logo-tagline">Fuelling Sustainable Growth</span>
+        </div>
+      </div>
+      <ul class="ccl-nav-links">
+        <li><a href="https://www.centralcoalfields.in/ind/about-ccl.aspx">About Us</a></li>
+        <li><a href="#">Performance</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="index.html" class="active">Sustainability</a></li>
+        <li><a href="#">Vigilance</a></li>
+        <li><a href="#">Info Desk</a></li>
+        <li><a href="#">CZone</a></li>
+        <li><a href="#">More ▾</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="ccl-csr-subnav">
+    <div class="ccl-csr-subnav-inner">
+      <span class="csr-subnav-label">CSR Division</span>
+      <a href="index.html" class="csr-subnav-link">📋 Overview</a>
+      <a href="index.html#csr-nav" class="csr-subnav-link active">📚 Education</a>
+      <a href="health.html" class="csr-subnav-link">🏥 Healthcare</a>
+      <a href="skill-development.html" class="csr-subnav-link">🔧 Skill Dev.</a>
+      <a href="sports.html" class="csr-subnav-link">🏅 Sports</a>
+      <a href="just-transition.html" class="csr-subnav-link">🌱 Just Transition</a>
+      <a href="animal-welfare.html" class="csr-subnav-link">🐄 Animal Welfare</a>
+      <a href="csr-reporting.html" class="csr-subnav-link">📊 Reporting</a>
+      <a href="flagship-projects.html" class="csr-subnav-link">📌 All Projects</a>
+    </div>
+  </div>
+</header>
+<!-- END CCL HEADER -->
+
+<!-- BREADCRUMB -->
+<div class="ccl-breadcrumb">
+  <a href="https://www.centralcoalfields.in">centralcoalfields.in</a>
+  <span class="ccl-breadcrumb-sep">›</span>
+  <a href="index.html">CSR</a>
+  <span class="ccl-breadcrumb-sep">›</span>
+  <span class="ccl-breadcrumb-current">📚 Education</span>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     HERO — Full width, CCL palette
+     ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-sector-badge">CSR Sector · Education</div>
+      <h1>Where Coalfields<br/>Produce <em>Engineers,</em><br/><em>Scholars</em> &amp; Champions</h1>
+      <p class="hero-intro">
+        From 11 boys coached in a borrowed room in 2012 to 194 students at IITs, NITs and top engineering colleges — CCL's education programmes have permanently rewritten the story of what is possible for children growing up in Jharkhand's Aspirational Districts.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#lal-ladli" class="btn-primary">CCL Ke Lal &amp; Laadli →</a>
+        <a href="#digital-vidya" class="btn-ghost">Project Digital Vidya</a>
+        <a href="#state-library" class="btn-ghost">State Library</a>
+      </div>
+    </div>
+    <div class="hero-panel reveal" style="transition-delay:.2s">
+      <div class="hp-label">Education at a Glance</div>
+      <div class="hp-row">
+        <div class="hp-val">194+</div>
+        <div class="hp-lbl">Students in IITs &amp; NITs via Ke Lal &amp; Laadli</div>
+      </div>
+      <div class="hp-row">
+        <div class="hp-val">193</div>
+        <div class="hp-lbl">Govt. Schools digitised via Digital Vidya</div>
+      </div>
+      <div class="hp-row">
+        <div class="hp-val">₹26.13 Cr</div>
+        <div class="hp-lbl">Cost of Digital Vidya across 8 districts</div>
+      </div>
+      <div class="hp-row">
+        <div class="hp-val">₹65.25 Cr</div>
+        <div class="hp-lbl">State Library investment, Ranchi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME NAV -->
+<div class="prog-nav">
+  <a href="#lal-ladli"    class="prog-pill active">🎓 CCL Ke Lal &amp; CCL Ki Laadli</a>
+  <a href="#digital-vidya" class="prog-pill">💻 Project Digital Vidya</a>
+  <a href="#state-library" class="prog-pill">📖 State Library, Ranchi</a>
+  <a href="#also-funded"   class="prog-pill">+ More Initiatives</a>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     PAGE LAYOUT — Sidebar + Main
+     ══════════════════════════════════════════════ -->
+<div class="page-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="index.html" class="sidebar-back">← CSR Home</a>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Education</div>
+      <a href="#lal-ladli"      class="sidebar-link active"><span class="sl-icon">🎓</span>Ke Lal &amp; Laadli</a>
+      <a href="#digital-vidya"  class="sidebar-link"><span class="sl-icon">💻</span>Digital Vidya</a>
+      <a href="#state-library"  class="sidebar-link"><span class="sl-icon">📖</span>State Library</a>
+      <a href="#also-funded"    class="sidebar-link"><span class="sl-icon">➕</span>More Initiatives</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Other Sectors</div>
+      <a href="health.html"            class="sidebar-link"><span class="sl-icon">🏥</span>Healthcare</a>
+      <a href="skill-development.html" class="sidebar-link"><span class="sl-icon">🔧</span>Skill Development</a>
+      <a href="sports.html"            class="sidebar-link"><span class="sl-icon">🏅</span>Sports &amp; Culture</a>
+      <a href="just-transition.html"   class="sidebar-link"><span class="sl-icon">🌱</span>Just Transition</a>
+      <a href="animal-welfare.html"    class="sidebar-link"><span class="sl-icon">🐄</span>Animal Welfare</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">CSR Portal</div>
+      <a href="csr-overview.html"      class="sidebar-link"><span class="sl-icon">📋</span>Overview</a>
+      <a href="board-committee.html"   class="sidebar-link"><span class="sl-icon">🏛️</span>Board Committee</a>
+      <a href="csr-policy.html"        class="sidebar-link"><span class="sl-icon">📜</span>Policy</a>
+      <a href="csr-reporting.html"     class="sidebar-link"><span class="sl-icon">📊</span>Reporting</a>
+      <a href="csr-awards.html"        class="sidebar-link"><span class="sl-icon">🏆</span>Awards</a>
+      <a href="csr-gallery.html"       class="sidebar-link"><span class="sl-icon">🖼️</span>Gallery</a>
+      <a href="flagship-projects.html" class="sidebar-link"><span class="sl-icon">📌</span>All Projects <span class="sl-badge">377</span></a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- ══════════════════════
+         PROGRAMME 1: KE LAL & LAADLI
+         ══════════════════════ -->
+    <section class="content-section alt" id="lal-ladli">
+      <div class="section-eyebrow reveal"><div class="section-eyebrow-line"></div><span class="section-eyebrow-text">Programme 1 of 3</span></div>
+      <h2 class="section-title reveal" style="transition-delay:.08s">CCL Ke Lal &amp; CCL Ki Laadli</h2>
+      <p class="section-desc reveal" style="transition-delay:.12s">Free JEE Advanced-level engineering entrance coaching — with schooling, hostel, meals, sports, and medical care — for underprivileged children from within 25 km of CCL establishments. Taught by IITian CCL officers. Running since 2012.</p>
+
+      <div class="lal-layout">
+        <!-- LEFT -->
+        <div>
+          <div class="lal-quote reveal">
+            <p>"Wards of farmers, labourers, tailors, mechanics, and rural shop owners — working today at Amazon, Microsoft, SAP Labs, and L&amp;T. Inspiring every aspirant from villages and small towns of Jharkhand."</p>
+            <div class="lal-quote-attr">— CCL Annual Report 2024–25 · CCL Ke Lal &amp; CCL Ki Laadli</div>
+          </div>
+
+          <div class="reveal" style="transition-delay:.05s">
+            <h3 style="font-size:14px;font-weight:700;color:var(--ccl-dark);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px">What Every Student Receives — Free of Charge</h3>
+            <div class="benefits-list">
+              <div class="benefit-item"><div class="benefit-num">1</div><div class="benefit-body"><h4>JEE Advanced-Level Coaching by IITian Officers</h4><p>CCL's own IITian employees serve as faculty — delivering elite coaching at no cost to students or the company beyond salaries already on payroll.</p></div></div>
+              <div class="benefit-item"><div class="benefit-num">2</div><div class="benefit-body"><h4>+2 Schooling at DAV Gandhinagar, Ranchi</h4><p>Students are enrolled in one of Ranchi's premier CBSE schools, ensuring their board results match their entrance coaching quality.</p></div></div>
+              <div class="benefit-item"><div class="benefit-num">3</div><div class="benefit-body"><h4>Hostel with 24×7 Security</h4><p>Secure, supervised residential accommodation on campus — giving students from distant villages a safe and stable base.</p></div></div>
+              <div class="benefit-item"><div class="benefit-num">4</div><div class="benefit-body"><h4>Nutritious &amp; Wholesome Meals</h4><p>Three meals a day — the only outsourced component of the entire programme — ensuring no student studies on an empty stomach.</p></div></div>
+              <div class="benefit-item"><div class="benefit-num">5</div><div class="benefit-body"><h4>Sports Facilities &amp; Medical Care</h4><p>Access to CCL's sports infrastructure and healthcare — managing the physical and mental wellbeing of students through a demanding 2-year programme.</p></div></div>
+              <div class="benefit-item"><div class="benefit-num">6</div><div class="benefit-body"><h4>Motivation &amp; Mentoring</h4><p>CCL employees serve as wardens, supervisors, and bus drivers — creating a tight-knit community around each cohort of students.</p></div></div>
+            </div>
+          </div>
+
+          <!-- Selection Process -->
+          <div class="reveal" style="margin-top:36px;transition-delay:.1s">
+            <h3 style="font-size:14px;font-weight:700;color:var(--ccl-dark);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">Selection Process</h3>
+            <p style="font-size:12.5px;color:var(--ccl-text-soft);margin-bottom:0">Open to 10th pass students, family income &lt;₹8 lakh/year, residing within 25 km of CCL establishments.</p>
+            <div class="process-grid">
+              <div class="process-step"><div class="ps-circle">📢</div><div class="ps-title">Open Notification</div><div class="ps-desc">Advertised across CCL districts for eligible 10th pass students</div></div>
+              <div class="process-step"><div class="ps-circle">📝</div><div class="ps-title">Entrance Test</div><div class="ps-desc">Competitive test held across CCL command areas</div></div>
+              <div class="process-step"><div class="ps-circle">✅</div><div class="ps-title">Merit Selection</div><div class="ps-desc">20 Boys + 20 Girls selected per year on merit</div></div>
+              <div class="process-step"><div class="ps-circle">🎓</div><div class="ps-title">2-Year Programme</div><div class="ps-desc">Class XI–XII + JEE coaching at DAV Gandhinagar</div></div>
+            </div>
+          </div>
+
+          <!-- Alumni -->
+          <div class="reveal" style="margin-top:36px;transition-delay:.1s">
+            <h3 style="font-size:14px;font-weight:700;color:var(--ccl-dark);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Where Our Alumni Are Today</h3>
+            <p style="font-size:12.5px;color:var(--ccl-text-soft);margin-bottom:0">194 students have secured admissions in India's premier engineering institutions since 2012. At the 2025 convocation, 5 students of IIT-ISM Dhanbad received degrees — including 1 Gold Medal from the Hon'ble President of India.</p>
+            <div class="alumni-grid">
+              <div class="alumni-card"><div class="alumni-college">IITs</div><div class="alumni-count">42+</div><div class="alumni-label">IIT Alumni</div></div>
+              <div class="alumni-card"><div class="alumni-college">NITs</div><div class="alumni-count">68+</div><div class="alumni-label">NIT Alumni</div></div>
+              <div class="alumni-card"><div class="alumni-college">Other Premier</div><div class="alumni-count">84+</div><div class="alumni-label">Top Eng. Colleges</div></div>
+              <div class="alumni-card"><div class="alumni-college" style="color:var(--ccl-yellow-dk)">Total</div><div class="alumni-count" style="color:var(--ccl-yellow-dk)">194+</div><div class="alumni-label">Since 2012</div></div>
+            </div>
+            <div class="employers-strip">
+              <span class="es-label">Employers ▸</span>
+              <span class="es-tag">Amazon</span>
+              <span class="es-tag">Microsoft</span>
+              <span class="es-tag">SAP Labs</span>
+              <span class="es-tag">L&amp;T</span>
+              <span class="es-tag">MNCs &amp; More</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT — Stat Tower -->
+        <div class="stat-tower reveal" style="transition-delay:.15s">
+          <div class="stat-card primary"><div class="sc-val">194+</div><div class="sc-lbl">Students in IITs, NITs &amp; top engineering colleges since 2012</div></div>
+          <div class="stat-card outlined"><div class="sc-val">80</div><div class="sc-lbl">Students enrolled at any given time<br/>(40 boys + 40 girls)</div></div>
+          <div class="stat-card dark"><div class="sc-val">₹1.5 Cr</div><div class="sc-lbl">Annual outlay · Avg. ₹1.80 lakh per candidate per year</div></div>
+          <div class="stat-card outlined"><div class="sc-val">2012</div><div class="sc-lbl">Year started — with just 11 boys in Ranchi</div></div>
+          <div class="stat-card outlined"><div class="sc-val">2016</div><div class="sc-lbl">Girls batch added — CCL Ki Laadli launched</div></div>
+          <div class="stat-card primary"><div class="sc-val">1 🏅</div><div class="sc-lbl">Gold Medal from Hon'ble President at IIT-ISM Dhanbad Convocation 2025</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         PROGRAMME 2: DIGITAL VIDYA
+         ══════════════════════ -->
+    <section class="content-section" id="digital-vidya">
+      <div class="section-eyebrow reveal"><div class="section-eyebrow-line"></div><span class="section-eyebrow-text">Programme 2 of 3</span></div>
+      <h2 class="section-title reveal" style="transition-delay:.08s">Project Digital Vidya</h2>
+      <p class="section-desc reveal" style="transition-delay:.12s">Smart Classrooms and ICT Labs installed in 193 government schools across all 8 CCL operational districts of Jharkhand — implemented through EdCIL, a Government of India enterprise under the Ministry of Education.</p>
+
+      <div class="dv-header-grid reveal" style="transition-delay:.15s">
+        <div>
+          <div class="status-badge status-complete">Installation Complete · 3-Year AMC Active</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;color:var(--ccl-dark);margin-bottom:12px">193 Schools. 8 Districts.<br/>One Digital Revolution.</h3>
+          <p style="font-size:13.5px;color:var(--ccl-text-soft);line-height:1.8;margin-bottom:18px">Every school was individually vetted by EdCIL for feasibility — +2 schools with more than 100 students and confirmed internet connectivity. The final school list was approved by District Collectors of all 8 districts. Installation and teacher training was completed and inaugurated on 24 January 2025.</p>
+          <div class="dv-kpi-row">
+            <div class="dv-kpi"><div class="dv-kpi-val">₹26.13 Cr</div><div class="dv-kpi-lbl">Project Cost</div></div>
+            <div class="dv-kpi"><div class="dv-kpi-val">3 Years</div><div class="dv-kpi-lbl">Duration incl. post-install support</div></div>
+            <div class="dv-kpi"><div class="dv-kpi-val">EdCIL</div><div class="dv-kpi-lbl">Implementing Agency</div></div>
+          </div>
+        </div>
+        <div class="dv-image-box">
+          <div class="dv-icon">🖥️</div>
+          <div class="dv-caption">Smart Classroom · Govt. School, Chanho, Ranchi</div>
+        </div>
+      </div>
+
+      <!-- What each school receives -->
+      <div class="reveal" style="transition-delay:.1s">
+        <h3 style="font-size:14px;font-weight:700;color:var(--ccl-dark);margin-top:8px;text-transform:uppercase;letter-spacing:.5px">What Each School Receives</h3>
+        <div class="lab-grid">
+          <div class="lab-item"><div class="lab-icon">📺</div><div class="lab-body"><h4>1 Smart Classroom</h4><p>Interactive smart board, projector and audio system for immersive, multimedia learning.</p></div></div>
+          <div class="lab-item"><div class="lab-icon">🖥️</div><div class="lab-body"><h4>1 Full ICT Lab</h4><p>10 computers, 10 tables, 20 chairs — complete hands-on digital access for every student.</p></div></div>
+          <div class="lab-item"><div class="lab-icon">📡</div><div class="lab-body"><h4>Internet Connectivity</h4><p>Broadband confirmed as feasibility criterion before inclusion — ensuring labs are genuinely usable.</p></div></div>
+          <div class="lab-item"><div class="lab-icon">👩‍🏫</div><div class="lab-body"><h4>Teacher Capacity Building</h4><p>Every school's teachers received hands-on training in using smart classrooms and digital tools.</p></div></div>
+          <div class="lab-item"><div class="lab-icon">🔧</div><div class="lab-body"><h4>3-Year Annual Maintenance</h4><p>Post-installation AMC ensures equipment remains functional throughout the project lifecycle.</p></div></div>
+          <div class="lab-item"><div class="lab-icon">📋</div><div class="lab-body"><h4>DC-Approved School List</h4><p>All 193 schools verified and endorsed by District Collectors — the right schools, prioritised correctly.</p></div></div>
+        </div>
+      </div>
+
+      <!-- District coverage -->
+      <div class="reveal" style="margin-top:40px;transition-delay:.1s">
+        <h3 style="font-size:14px;font-weight:700;color:var(--ccl-dark);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">District-wise Coverage</h3>
+        <p style="font-size:12.5px;color:var(--ccl-text-soft);margin-bottom:0">All 8 CCL operational districts covered. Schools selected in/around Blocks and Panchayats closest to CCL mines.</p>
+        <div class="districts-grid">
+          <div class="dc-card"><div class="dc-name">Ranchi</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+          <div class="dc-card"><div class="dc-name">Ramgarh</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+          <div class="dc-card"><div class="dc-name">Hazaribagh</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+          <div class="dc-card"><div class="dc-name">Bokaro</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+          <div class="dc-card"><div class="dc-name">Chatra</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+          <div class="dc-card"><div class="dc-name">Giridih</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+          <div class="dc-card"><div class="dc-name">Latehar</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+          <div class="dc-card"><div class="dc-name">Pakur</div><div class="dc-check">✓</div><div class="dc-lbl">Covered</div></div>
+        </div>
+      </div>
+
+      <!-- Impact bar -->
+      <div class="dv-impact-bar reveal" style="transition-delay:.15s">
+        <div class="dib"><div class="dib-val">193</div><div class="dib-lbl">Govt. Schools with Smart Classrooms</div></div>
+        <div class="dib"><div class="dib-val">1,930</div><div class="dib-lbl">Computers deployed<br/>(10 per school)</div></div>
+        <div class="dib"><div class="dib-val">8</div><div class="dib-lbl">Aspirational Districts Covered</div></div>
+        <div class="dib"><div class="dib-val">3 Yrs</div><div class="dib-lbl">Post-install AMC &amp; Teacher Support</div></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         PROGRAMME 3: STATE LIBRARY
+         ══════════════════════ -->
+    <section class="content-section alt" id="state-library">
+      <div class="section-eyebrow reveal"><div class="section-eyebrow-line"></div><span class="section-eyebrow-text">Programme 3 of 3</span></div>
+      <h2 class="section-title reveal" style="transition-delay:.08s">State Library, Ranchi</h2>
+      <p class="section-desc reveal" style="transition-delay:.12s">A landmark public institution for Jharkhand — a GRIHA 4-star rated, six-floor library on 2 acres of land in Ranchi. Built under MoU with the Department of School Education, Government of Jharkhand. Open to all citizens of the state.</p>
+
+      <div class="lib-layout">
+        <div>
+          <div class="status-badge status-ongoing reveal">90% Structure Complete · Finishing in Progress</div>
+
+          <p class="reveal" style="font-size:13.5px;color:var(--ccl-text-soft);line-height:1.8;margin-bottom:24px;transition-delay:.05s">CCL's single largest educational infrastructure investment — ₹65.25 crore (₹30 crore by CIL), with a contract awarded at ₹55 crore (excluding books). Construction was delayed due to forest permission requirements for tree removal and dismantling of the old building, with ground-breaking in March 2024. The Government of Jharkhand's Secretary of Education has requested extension of the MoU to 31 March 2026.</p>
+
+          <div class="lib-specs reveal" style="transition-delay:.1s">
+            <div class="lib-spec"><div class="lib-spec-icon">🏛️</div><h4>Six Floors, 11,753 Sq. Metres</h4><p>Spread across 2 acres of land in Ranchi — a landmark public building for the state capital.</p></div>
+            <div class="lib-spec"><div class="lib-spec-icon">📚</div><h4>Reading Halls &amp; E-Resource Section</h4><p>Separate reading halls, a dedicated e-resources and journals section, and a digital library zone.</p></div>
+            <div class="lib-spec"><div class="lib-spec-icon">🎓</div><h4>Group Study &amp; Cubicles</h4><p>Cubicles for individual focus, group study rooms, conference rooms, and meeting rooms throughout.</p></div>
+            <div class="lib-spec"><div class="lib-spec-icon">☕</div><h4>Cafeteria &amp; Meditation Centre</h4><p>A cafeteria and meditation centre — making the library a full-day destination, not just a reference stop.</p></div>
+            <div class="lib-spec"><div class="lib-spec-icon">♻️</div><h4>GRIHA 4-Star Green Rating</h4><p>Solar rooftop power, sewage treatment plant, and sustainable design achieving GRIHA 4-star certification.</p></div>
+            <div class="lib-spec"><div class="lib-spec-icon">🔒</div><h4>Full Smart Infrastructure</h4><p>CCTV, data networking, access control, fire alarm systems, and modular furniture throughout all six floors.</p></div>
+          </div>
+        </div>
+
+        <div class="lib-highlights reveal" style="transition-delay:.15s">
+          <div class="lib-hero-card">
+            <div class="lib-hero-val">₹65.25 Cr</div>
+            <div class="lib-hero-lbl">Total Investment<br/>(₹30 Cr by CIL + ₹35.25 Cr by CCL)</div>
+          </div>
+          <div class="lib-highlight"><div class="lh-icon">🤝</div><div class="lh-body"><h4>MoU with Govt. of Jharkhand</h4><p>Department of School Education formally committed to handing over and operating the library as a public asset.</p></div></div>
+          <div class="lib-highlight"><div class="lh-icon">🌿</div><div class="lh-body"><h4>GRIHA 4-Star Rated</h4><p>Solar rooftop power generation and a sewage treatment plant make this one of Jharkhand's most sustainable public buildings.</p></div></div>
+          <div class="lib-highlight"><div class="lh-icon">👥</div><div class="lh-body"><h4>Open to All Citizens</h4><p>Open to every citizen of Jharkhand — students, researchers, professionals and the general public.</p></div></div>
+          <div class="lib-highlight"><div class="lh-icon">📊</div><div class="lh-body"><h4>Construction Status</h4><p>Structure 90% complete. Overall completion 60%. Finishing works in progress. Expected handover: March 2026.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════
+         ALSO FUNDED
+         ══════════════════════ -->
+    <section class="content-section" id="also-funded">
+      <div class="section-eyebrow reveal"><div class="section-eyebrow-line"></div><span class="section-eyebrow-text">More Education Initiatives</span></div>
+      <h2 class="section-title reveal" style="transition-delay:.08s">Also Funded by CCL CSR</h2>
+      <p class="section-desc reveal" style="transition-delay:.12s">Beyond the three flagship programmes, CCL supports a range of education-adjacent initiatives that extend access, improve quality, and build lasting infrastructure.</p>
+
+      <div class="also-grid reveal" style="transition-delay:.15s">
+        <div class="also-card">
+          <div class="also-icon">🍱</div>
+          <h4>Centralised Kitchen, Ramgarh</h4>
+          <p>A ₹22.09 crore kitchen to deliver mid-day meals to 50,000 students across 538 government schools in Ramgarh district — built in partnership with Akshaya Patra Foundation. Structure 80% complete.</p>
+          <div class="also-tag">₹22.09 Cr · 50,000 Students</div>
+        </div>
+        <div class="also-card">
+          <div class="also-icon">💻</div>
+          <h4>Business Computer Applications — CIA Express</h4>
+          <p>Implemented by ICA Foundation, this programme trained 100 SC/ST underprivileged students from Ranchi college campuses in Business Computer Applications, Accounting, ERP and GST — with 100% placement guarantee and all-time job cards.</p>
+          <div class="also-tag">100% Placed · SC/ST Beneficiaries</div>
+        </div>
+        <div class="also-card">
+          <div class="also-icon">🏫</div>
+          <h4>School Health Camps</h4>
+          <p>CCL doctors conduct dedicated health camps in government schools within command areas — screening for anaemia, vision, dental and general health issues, with referral services provided.</p>
+          <div class="also-tag">673 Total Camps in FY 2024–25</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION NAV -->
+    <div class="section-nav">
+      <div class="snav">
+        <a href="index.html" class="snav-link">
+          <div><div class="snav-dir">← Back to</div><div class="snav-title">All CSR Sectors</div></div>
+        </a>
+        <div class="snav-current">📚 Education</div>
+        <a href="health.html" class="snav-link">
+          <div style="text-align:right"><div class="snav-dir">Next Sector →</div><div class="snav-title">🏥 Healthcare</div></div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+</div><!-- end page-layout -->
+
+<!-- ══════════════════════════════════════════════
+     CCL FOOTER — Systems Dept. will replace with PHP include
+     ══════════════════════════════════════════════ -->
+<footer class="ccl-footer">
+  <div class="ccl-footer-main">
+    <div class="ccl-footer-grid">
+      <div>
+        <div class="footer-section-title">Central Coalfields Limited</div>
+        <div class="footer-brand-desc">A Government of India Enterprise under Coal India Limited. Headquartered at Darbhanga House, Ranchi, Jharkhand. One of the eight subsidiary companies of Coal India Limited.</div>
+        <div class="footer-edu-tag">
+          <div class="footer-edu-tag-label">Education Sector · CSR</div>
+          <div class="footer-edu-tag-text">194+ students in IITs &amp; NITs · 193 schools digitised · ₹65.25 Cr State Library</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-section-title">CSR Navigation</div>
+        <ul class="footer-links">
+          <li><a href="csr-overview.html">CSR Overview</a></li>
+          <li><a href="board-committee.html">Board CSR Committee</a></li>
+          <li><a href="csr-policy.html">CSR Policy &amp; Guidelines</a></li>
+          <li><a href="csr-reporting.html">CSR Reporting</a></li>
+          <li><a href="csr-awards.html">CSR Awards</a></li>
+          <li><a href="csr-gallery.html">CSR Gallery</a></li>
+          <li><a href="flagship-projects.html">Flagship Projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-section-title">CSR Sectors</div>
+        <ul class="footer-links">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="health.html">Healthcare</a></li>
+          <li><a href="skill-development.html">Skill Development</a></li>
+          <li><a href="sports.html">Sports &amp; Culture</a></li>
+          <li><a href="just-transition.html">Just Transition</a></li>
+          <li><a href="animal-welfare.html">Animal Welfare</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-section-title">Contact CSR Division</div>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item"><div class="footer-contact-icon">🏛️</div><div class="footer-contact-text"><strong>Head Office</strong>Darbhanga House, Ranchi<br/>Jharkhand — 834029</div></div>
+          <div class="footer-contact-item"><div class="footer-contact-icon">📞</div><div class="footer-contact-text"><strong>CSR Helpdesk</strong>0651-2360700</div></div>
+          <div class="footer-contact-item"><div class="footer-contact-icon">✉️</div><div class="footer-contact-text"><strong>Email</strong>csr@centralcoalfields.in</div></div>
+          <div class="footer-contact-item"><div class="footer-contact-icon">🌐</div><div class="footer-contact-text"><strong>Main Website</strong>www.centralcoalfields.in</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ccl-footer-strip">
+    <div class="ccl-footer-strip-inner">
+      <div class="ccl-footer-strip-left">Designed &amp; Developed by Systems Dept. CCL Ranchi &nbsp;|&nbsp; Updated on 28-02-2026</div>
+      <div class="ccl-footer-strip-right">
+        <a href="#">Website Policies</a>
+        <div class="footer-strip-sep"></div>
+        <a href="#">IT Policy</a>
+        <div class="footer-strip-sep"></div>
+        <a href="#">Website Information Manager</a>
+        <div class="footer-strip-sep"></div>
+        <div class="visitor-box">Visitors: 4,82,316</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END CCL FOOTER -->
+
+<script>
+  /* Scroll reveal */
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 55);
+        ro.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  /* Sidebar active link on scroll */
+  const sectionMap = {
+    'lal-ladli': ['#lal-ladli'],
+    'digital-vidya': ['#digital-vidya'],
+    'state-library': ['#state-library'],
+    'also-funded': ['#also-funded']
+  };
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+  const progPills    = document.querySelectorAll('.prog-pill');
+
+  const so = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+
+        sidebarLinks.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
+        });
+        progPills.forEach(p => {
+          p.classList.toggle('active', p.getAttribute('href') === `#${id}`);
+        });
+      }
+    });
+  }, { threshold: 0.35 });
+
+  ['lal-ladli','digital-vidya','state-library','also-funded'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) so.observe(el);
+  });
+</script>
+</body>
+</html>
